@@ -11,13 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeAclonica_noActionBar">
+        <activity android:name=".ShopsActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".WhoWeAreActivity" />
         <activity android:name=".YourAccountActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".CategoryActivity"/>
-        <activity android:name=".ShopsActivity"/>
-        <activity android:name=".ShopActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
