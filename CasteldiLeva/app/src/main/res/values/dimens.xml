@@ -2,4 +2,14 @@
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="cvCategoryWidth">188dp</dimen>
+    <dimen name="cvCategoryHeight">116dp</dimen>
+    <dimen name="cvCategoryRadius">30dp</dimen>
+    <dimen name="tvCategoryTextSize">16dp</dimen>
+    <dimen name="gvCategoriesColumnWidth">205dp</dimen>
+    <dimen name="gvCategoriesVerticalSpacing">16dp</dimen>
+    <dimen name="tvTextSize">18sp</dimen>
+    <dimen name="ivLogoWidth">100dp</dimen>
+    <dimen name="ivLogoHeight">50dp</dimen>
+    <dimen name="ivLogoShopHeight">150dp</dimen>
 </resources>

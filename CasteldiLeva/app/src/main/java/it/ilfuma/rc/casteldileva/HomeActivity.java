@@ -41,6 +41,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(getApplicationContext(), YourAccountActivity.class));
                 break;
             case R.id.btn_Shops:
+                startActivity(new Intent(getApplicationContext(), CategoryActivity.class));
                 break;
             case R.id.btn_whoWeAre:
                 startActivity(new Intent(getApplicationContext(), WhoWeAreActivity.class));
