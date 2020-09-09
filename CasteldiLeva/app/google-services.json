@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "798735675454",
+    "firebase_url": "https://castel-di-leva.firebaseio.com",
+    "project_id": "castel-di-leva",
+    "storage_bucket": "castel-di-leva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798735675454:android:1d0fff9a0fcdaef701e16f",
+        "android_client_info": {
+          "package_name": "it.ilfuma.rc.casteldileva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798735675454-8vkk4h1fh4m8opj3i3l1bnn20lgali3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgyMebEd-i7WJhmptQweTykxeW6Mqe4uM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798735675454-8vkk4h1fh4m8opj3i3l1bnn20lgali3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
