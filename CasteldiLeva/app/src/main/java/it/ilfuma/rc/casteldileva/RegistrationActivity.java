@@ -95,6 +95,10 @@ public class RegistrationActivity extends AppCompatActivity
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        /**
+                         * da qui si scrive sul database
+                         */
                         if(task.isSuccessful()){
                             Toast.makeText( RegistrationActivity.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userId = fAuth.getCurrentUser().getUid();

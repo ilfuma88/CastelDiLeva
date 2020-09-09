@@ -29,6 +29,7 @@ public class HomeActivity extends AppCompatActivity
         btn_yourAccount.setOnClickListener(this);
         btn_Shops.setOnClickListener(this);
         btn_whoWeAre.setOnClickListener(this);
+        btn_yourCoupons.setOnClickListener(this);
 
 
 
@@ -45,6 +46,9 @@ public class HomeActivity extends AppCompatActivity
                 break;
             case R.id.btn_whoWeAre:
                 startActivity(new Intent(getApplicationContext(), WhoWeAreActivity.class));
+                break;
+            case R.id.btn_yourCoupons:
+                startActivity(new Intent(getApplicationContext(), YourCouponActivity.class));
                 break;
 
 
