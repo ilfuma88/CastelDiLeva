@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#ffffff</color>
+    <color name="col_dark_txt">#D5123C42</color>
+    <color name="col_et_hint">#F1D876</color>
 </resources>
