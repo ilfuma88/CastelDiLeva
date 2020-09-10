@@ -20,86 +20,98 @@
 
     <Button
         android:id="@+id/btn_Deals"
-        android:layout_width="124dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
         android:text="Offerte"
         android:textColor="@color/col_dark_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_howItWorks"
-        app:layout_constraintTop_toBottomOf="@+id/btn_yourCoupons"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_yourCoupons" />
 
     <Button
         android:id="@+id/btn_whoWeAre"
-        android:layout_width="124dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
         android:text="Chi Siamo"
         android:textColor="@color/col_dark_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_yourAccount"
         app:layout_constraintTop_toBottomOf="@+id/btn_Deals" />
 
     <Button
         android:id="@+id/btn_yourAccount"
-        android:layout_width="124dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="115dp"
         android:background="@drawable/custom_button"
         android:text="Il Tuo Account"
         android:textColor="@color/col_dark_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_howItWorks"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_howItWorks" />
 
     <Button
         android:id="@+id/btn_howItWorks"
-        android:layout_width="wrap_content"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="115dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
         android:text="Come \n Funziona"
         android:textColor="@color/col_dark_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Shops"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Shops" />
 
     <Button
         android:id="@+id/btn_Shops"
-        android:layout_width="124dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
         android:text="Attivita'"
         android:textColor="@color/col_dark_txt"
         android:textSize="@dimen/btn_txt_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/btn_yourCoupons"
-        android:layout_width="124dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btn_home_width"
+        android:layout_height="@dimen/btn_home_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
         android:text="I Tuoi Coupon"
         android:textColor="@color/col_dark_txt"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Shops"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_tv_bg"
+        android:padding="@dimen/tv_padding_large"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="@dimen/tv_title_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

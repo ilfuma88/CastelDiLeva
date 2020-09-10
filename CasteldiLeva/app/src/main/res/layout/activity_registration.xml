@@ -60,7 +60,7 @@
         android:id="@+id/tv_appName"
         android:layout_width="0dp"
         android:layout_height="62dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_tv_bg"
         android:fontFamily="@font/aclonica"
         android:foregroundTint="#C0664B"
