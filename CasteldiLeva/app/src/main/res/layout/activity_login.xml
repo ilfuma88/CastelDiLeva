@@ -9,7 +9,7 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_bg_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="0.7"
@@ -26,8 +26,7 @@
         android:id="@+id/tv_whoWeAre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/btn_about_us"
         android:textColor="#D5123C42"
@@ -157,14 +156,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvDontHaveAccount"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/bg_tv_faded_white_large"
         android:text="@string/tv_dont_have_account"
         android:textAlignment="center"
         android:textColor="@color/col_dark_txt"

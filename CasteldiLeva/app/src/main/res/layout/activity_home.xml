@@ -7,7 +7,7 @@
     tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/iv_background"
+        android:id="@+id/iv_bg_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.7"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
-        android:text="Offerte"
+        android:text="@string/btn_offers"
         android:textColor="@color/col_dark_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_howItWorks"
@@ -41,7 +41,7 @@
         android:layout_marginTop="115dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
-        android:text="Chi Siamo"
+        android:text="@string/btn_who_we_are"
         android:textColor="@color/col_dark_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_yourAccount"
@@ -54,7 +54,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="115dp"
         android:background="@drawable/custom_button"
-        android:text="Il Tuo Account"
+        android:text="@string/btn_your_account"
         android:textColor="@color/col_dark_txt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_howItWorks" />
@@ -67,7 +67,7 @@
         android:layout_marginTop="115dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
-        android:text="Come \n Funziona"
+        android:text="@string/btn_how_works"
         android:textColor="@color/col_dark_txt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Shops" />
@@ -77,31 +77,31 @@
         android:layout_width="@dimen/btn_home_width"
         android:layout_height="@dimen/btn_home_height"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
-        android:text="Attivita'"
+        android:text="@string/btn_activities"
         android:textColor="@color/col_dark_txt"
         android:textSize="@dimen/btn_txt_size"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_title" />
 
     <Button
         android:id="@+id/btn_yourCoupons"
         android:layout_width="@dimen/btn_home_width"
         android:layout_height="@dimen/btn_home_height"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button"
-        android:text="I Tuoi Coupon"
+        android:text="@string/btn_your_coupons"
         android:textColor="@color/col_dark_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Shops"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_title" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_home_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

@@ -7,7 +7,7 @@
     tools:context=".RegistrationActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/iv_bg_register"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="0.7"
@@ -46,7 +46,7 @@
         android:backgroundTint="@color/col_dark_txt"
         android:ems="10"
         android:fontFamily="@font/aclonica"
-        android:hint="Email"
+        android:hint="@string/et_hint_email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -174,9 +174,9 @@
         android:id="@+id/tv_whoWeAre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
-        android:text="Chi siamo!?"
+        android:text="@string/btn_about_us"
         android:textColor="@color/col_dark_txt"
         android:textColorHint="#AB3F21"
         android:textSize="16sp"

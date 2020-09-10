@@ -32,33 +32,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="0dp"
-                    android:layout_height="145dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
-                    android:scaleType="fitXY"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/iv_landscape" />
-
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="32dp"
                     android:background="@drawable/custom_tv_bg"
                     android:padding="@dimen/tv_padding_small"
-                    android:text="Dove nasce #IORESTOACASTELDILEVA"
+                    android:text="@string/tv_title_who_we_are"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -67,8 +53,9 @@
                     android:layout_marginTop="16dp"
                     android:background="@android:drawable/editbox_dropdown_light_frame"
                     android:backgroundTint="?android:attr/textColorSecondaryInverse"
-                    android:text="Un quartiere migliore passa \n per una comunità migliore"
+                    android:text="@string/tv_who_we_are_1"
                     android:textAlignment="center"
+                    android:textColor="@color/col_dark_txt"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -79,21 +66,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
-                    android:background="@android:drawable/editbox_dropdown_light_frame"
-                    android:backgroundTint="?android:attr/textColorSecondaryInverse"
+                    android:background="@drawable/bg_tv_faded_white_large"
                     android:padding="@dimen/tv_padding_small"
                     android:paddingLeft="10sp"
-                    android:text="#IorestoaCasteldileva nasce dall'idea di un negozio sulla via, che in piena emergenza Coronavirus, invece di abbattersi, pensa a qualcosa per ripartire con più forza di prima. Così nasce l'iniziativa, insieme agli altri commercianti aderenti, di sensibilizzare gli abitanti della zona a scegliere le attività commerciali presenti sul territorio. Perché scegliere un'attività locale, è un discorso ampio e pieno di sfaccettature, ma ciò nonostante, tutte le attività aderenti si impegnano comunque attraverso questa iniziativa a essere maggiormente visibili, a farsi conoscere da chi ancora non conosce alcune realtà, a premiare tutti insieme gli abitanti che scelgono di restare all'interno della nostra comunità."
+                    android:text="@string/tv_who_we_are_2"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@color/col_dark_txt"
                     android:textSize="@dimen/tvTextSize"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5"
-                    app:layout_constraintVertical_bias="0.137" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <Button
                     android:id="@+id/btn_goBack"

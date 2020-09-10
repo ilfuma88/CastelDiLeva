@@ -7,7 +7,7 @@
     tools:context=".YourAccountActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_bg_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
@@ -22,20 +22,30 @@
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/custom_button"
         android:onClick="logout"
         android:padding="@dimen/btn_padding"
-        android:text="Logout"
+        android:text="@string/btn_Log_out"
         android:textColor="@color/col_dark_txt"
-        android:textSize="@dimen/btn_padding"
+        android:textSize="@dimen/btn_txt_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_bg_light_account"
+        android:layout_width="411dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_yourProfile"
+        app:srcCompat="@drawable/bg_tv_faded_white_large" />
+
+    <ImageView
+        android:id="@+id/iv_personal_photo"
         android:layout_width="104dp"
         android:layout_height="102dp"
         android:layout_marginStart="24dp"
@@ -65,13 +75,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="16dp"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv_your_name"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_yourProfile" />
+        app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_light_account" />
 
     <TextView
         android:id="@+id/tv_yourEmail"
@@ -79,10 +87,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv__your_email"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"
         app:layout_constraintTop_toBottomOf="@+id/tv_yuorName" />
 
     <TextView
@@ -91,10 +99,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv_your_cellphone"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"
         app:layout_constraintTop_toBottomOf="@+id/tv_yourEmail" />
+
+    <Button
+        android:id="@+id/btn_account_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_button"
+        android:padding="@dimen/btn_padding"
+        android:text="@string/btn_go_back"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/btn_txt_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
