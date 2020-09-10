@@ -29,7 +29,7 @@ public class YourAccountActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing);
+        setContentView(R.layout.activity_your_account);
         tv_yourPhone = findViewById(R.id.tv_yourPhone);
         tv_yourName =  findViewById(R.id.tv_yuorName);
         tv_yourEmail =  findViewById(R.id.tv_yourEmail);
