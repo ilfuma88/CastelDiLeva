@@ -22,5 +22,5 @@
     <string name="btn_about_us">Chi siamo</string>
     <string name="tv_create_new_account">Crea un nuovo account</string>
     <string name="et_hint_name_surname">Nome e Cognome</string>
-    <string name="btn_back_to_login">Torna al Login</string>
+    <string name="btn_back_to_login">Vai al Login</string>
 </resources>

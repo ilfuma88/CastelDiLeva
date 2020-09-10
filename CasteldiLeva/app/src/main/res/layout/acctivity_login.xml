@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/torre_santuario_cut" />
+        app:srcCompat="@drawable/torre_santuario" />
 
     <TextView
         android:id="@+id/tv_whoWeAre"
