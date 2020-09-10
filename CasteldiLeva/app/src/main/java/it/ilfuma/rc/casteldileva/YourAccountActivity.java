@@ -51,7 +51,7 @@ public class YourAccountActivity extends AppCompatActivity {
 
     public void logout(View v){
         fAuth.signOut(); //logout
-        startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         finish();
     }
 }
