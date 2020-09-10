@@ -22,6 +22,7 @@ import it.ilfuma.rc.casteldileva.riccardoUtils.FirestoreHelper;
 public class YourCouponActivity extends AppCompatActivity {
     private static final String TAG = "TAG";
     String inputValue;
+    FirestoreHelper helper = new FirestoreHelper();
     FirebaseAuth fAuth = FirebaseAuth.getInstance();
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     ImageView iv_qr;
@@ -34,7 +35,6 @@ public class YourCouponActivity extends AppCompatActivity {
 
         tv_numberOfCoupon = findViewById(R.id.tv_numberOfCoupon);
         iv_qr = findViewById(R.id.iv_qr);
-        FirestoreHelper helper = new FirestoreHelper();
 
         getNumberOfCoupon();
         getQRcode();
