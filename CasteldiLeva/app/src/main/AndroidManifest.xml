@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeAclonica_noActionBar">
-        <activity android:name=".HowItWorksActivity"></activity>
+        <activity android:name=".DealsActivity"></activity>
+        <activity android:name=".HowItWorksActivity" />
         <activity android:name=".ShopsActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".ShopActivity" />

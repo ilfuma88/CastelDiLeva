@@ -26,6 +26,7 @@ public class HomeActivity extends AppCompatActivity
         btn_yourCoupons = findViewById(R.id.btn_yourCoupons);
 
 
+        btn_Deals.setOnClickListener(this);
         btn_yourAccount.setOnClickListener(this);
         btn_Shops.setOnClickListener(this);
         btn_whoWeAre.setOnClickListener(this);
@@ -53,6 +54,9 @@ public class HomeActivity extends AppCompatActivity
                 break;
             case R.id.btn_howItWorks:
                 startActivity(new Intent(getApplicationContext(), HowItWorksActivity.class));
+                break;
+            case R.id.btn_Deals:
+                startActivity(new Intent(getApplicationContext(), DealsActivity.class));
                 break;
         }
     }

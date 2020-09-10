@@ -21,4 +21,10 @@
     <dimen name="tv_padding_small">5dp</dimen>
     <dimen name="btn_home_width">124dp</dimen>
     <dimen name="btn_home_height">82dp</dimen>
+    <dimen name="margin_distance_large">32dp</dimen>
+    <dimen name="margin_distance_small">8dp</dimen>
+    <dimen name="cv_corner_radius_dimension">4dp</dimen>
+    <dimen name="cv_elevation_dimension">4dp</dimen>
+    <dimen name="cv_padding_small">4dp</dimen>
+    <dimen name="cv_height_medium">150dp</dimen>
 </resources>

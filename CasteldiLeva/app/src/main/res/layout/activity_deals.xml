@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDealsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E39898"
+    tools:context=".DealsActivity">
+
+    <ScrollView
+        android:id="@+id/svDeals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDeals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDeals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_distance_small"
+                android:layout_marginTop="@dimen/margin_distance_large"
+                android:layout_marginEnd="@dimen/margin_distance_small"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/text_tvDeals"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cv_height_medium"
+                android:layout_marginStart="@dimen/margin_distance_small"
+                android:layout_marginTop="@dimen/margin_distance_large"
+                android:layout_marginEnd="@dimen/margin_distance_small"
+                android:orientation="vertical"
+                app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
+                app:cardElevation="@dimen/cv_elevation_dimension"
+                app:contentPadding="@dimen/cv_padding_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeals">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCvDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80A691CA">
+
+                    <TextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aclonica"
+                        android:text="@string/text_tvDiscount"
+                        android:textSize="@dimen/tvTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvComplimentaryServices"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cv_height_medium"
+                android:layout_marginStart="@dimen/margin_distance_small"
+                android:layout_marginTop="@dimen/margin_distance_large"
+                android:layout_marginEnd="@dimen/margin_distance_small"
+                android:layout_marginBottom="@dimen/margin_distance_large"
+                android:orientation="vertical"
+                app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
+                app:cardElevation="@dimen/cv_elevation_dimension"
+                app:contentPadding="@dimen/cv_padding_small"
+                app:layout_constraintBottom_toTopOf="@+id/cvSpecialPackets"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvDiscount">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCvComplimentaryServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80A691CA">
+
+                    <TextView
+                        android:id="@+id/tvComplimentaryServices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aclonica"
+                        android:text="@string/text_tvComplimentaryServices"
+                        android:textSize="@dimen/tvTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSpecialPackets"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cv_height_medium"
+                android:layout_marginStart="@dimen/margin_distance_small"
+                android:layout_marginEnd="@dimen/margin_distance_small"
+                android:layout_marginBottom="@dimen/margin_distance_large"
+                android:orientation="vertical"
+                app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
+                app:cardElevation="@dimen/cv_elevation_dimension"
+                app:contentPadding="@dimen/cv_padding_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCvSpecialPackets"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80A691CA">
+
+                    <TextView
+                        android:id="@+id/tvSpecialPackets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aclonica"
+                        android:text="@string/text_tvSpecialPackets"
+                        android:textSize="@dimen/tvTextSize"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
