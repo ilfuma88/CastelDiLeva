@@ -16,9 +16,11 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-public class YourAccountActivity extends AppCompatActivity {
+public class YourAccountActivity extends AppCompatActivity
+                                    implements View.OnClickListener{
 
     TextView tv_yourName, tv_yourEmail, tv_yourPhone;
+    Button btn_logout;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -31,6 +33,10 @@ public class YourAccountActivity extends AppCompatActivity {
         tv_yourPhone = findViewById(R.id.tv_yourPhone);
         tv_yourName =  findViewById(R.id.tv_yuorName);
         tv_yourEmail =  findViewById(R.id.tv_yourEmail);
+        btn_logout = findViewById(R.id.btn_logout);
+
+        btn_logout.setOnClickListener(this);
+
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -50,10 +56,14 @@ public class YourAccountActivity extends AppCompatActivity {
 
     }
 
-
-    public void logout(View v){
-        fAuth.signOut(); //logout
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        finish();
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_logout:
+                FirebaseAuth.getInstance().signOut(); //logout
+                startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
+                finish();
+                break;
+        }
     }
 }

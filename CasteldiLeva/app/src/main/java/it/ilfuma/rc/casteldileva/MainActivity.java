@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             setContentView(R.layout.activity_main);
             //Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, LoginActivity.class);
+            Intent intent = new Intent(this, RegistrationActivity.class);
             startActivity(intent);
             finish();
         }
