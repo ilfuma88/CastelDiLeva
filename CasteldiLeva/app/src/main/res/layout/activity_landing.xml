@@ -10,13 +10,13 @@
         android:id="@+id/iv_bg_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="fitXY"
         android:alpha="0.7"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/castel_di_leva_lunga" />
+        app:srcCompat="@drawable/torre_santuario_cut" />
 
     <Button
         android:id="@+id/btn_logout"
@@ -87,7 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv__your_email"
         app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"
@@ -99,7 +98,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_tv_faded_white_small"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv_your_cellphone"
         app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"

@@ -3,7 +3,7 @@
     package="it.ilfuma.rc.casteldileva">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,34 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeAclonica_noActionBar">
-
-        <activity android:name=".ShopsActivity"/>
-        <activity android:name=".CategoryActivity"/>
-        <activity android:name=".ShopActivity"/>
+        <activity android:name=".HowItWorksActivity"></activity>
+        <activity android:name=".ShopsActivity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".ShopActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".WhoWeAreActivity" />
         <activity android:name=".YourAccountActivity" />
         <activity android:name=".YourCouponActivity" />
         <activity android:name=".RegistrationActivity" />
-
         <activity android:name=".MainActivity">
-
             <intent-filter>
-
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
-
         </activity>
-
         <activity android:name=".LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
