@@ -28,60 +28,76 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHowItWorks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/custom_tv_bg"
+                android:padding="@dimen/tv_padding_large"
+                android:text="@string/tv_how_it_works"
+                android:textAlignment="center"
+                android:textSize="@dimen/tv_title_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <VideoView
+                android:id="@+id/vvHowItWorks"
+                android:layout_width="0dp"
+                android:layout_height="226dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHowItWorks" />
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@android:drawable/ic_media_play"
+                android:backgroundTint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/vvHowItWorks"
+                app:layout_constraintEnd_toEndOf="@+id/vvHowItWorks"
+                app:layout_constraintStart_toStartOf="@+id/vvHowItWorks"
+                app:layout_constraintTop_toTopOf="@+id/vvHowItWorks" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/custom_tv_bg"
+                android:padding="@dimen/tv_padding_large"
+                android:text="Come funziona l'app"
+                android:textAlignment="center"
+                android:textSize="@dimen/tv_title_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvHowItWorks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vvHowItWorks" />
+
+            <TextView
+                android:id="@+id/tv_how_app_works"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_tv_faded_white_large"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/col_dark_txt"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/tvHowItWorks"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/custom_tv_bg"
-        android:padding="@dimen/tv_padding_large"
-        android:text="@string/tv_how_it_works"
-        android:textAlignment="center"
-        android:textSize="@dimen/tv_title_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/custom_tv_bg"
-        android:padding="@dimen/tv_padding_large"
-        android:text="Come funziona l'app"
-        android:textAlignment="center"
-        android:textSize="@dimen/tv_title_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vvHowItWorks" />
-
-    <VideoView
-        android:id="@+id/vvHowItWorks"
-        android:layout_width="0dp"
-        android:layout_height="226dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHowItWorks" />
-
-    <Button
-        android:id="@+id/btnPlay"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="@android:drawable/ic_media_play"
-        android:backgroundTint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="@+id/vvHowItWorks"
-        app:layout_constraintEnd_toEndOf="@+id/vvHowItWorks"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/vvHowItWorks" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

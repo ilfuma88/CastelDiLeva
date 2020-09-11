@@ -20,7 +20,7 @@ public class YourAccountActivity extends AppCompatActivity
                                     implements View.OnClickListener{
 
     TextView tv_yourName, tv_yourEmail, tv_yourPhone;
-    Button btn_logout;
+    Button btn_logout, btn_account_go_back;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -34,9 +34,10 @@ public class YourAccountActivity extends AppCompatActivity
         tv_yourName =  findViewById(R.id.tv_yuorName);
         tv_yourEmail =  findViewById(R.id.tv_yourEmail);
         btn_logout = findViewById(R.id.btn_logout);
+        btn_account_go_back = findViewById(R.id.btn_account_go_back);
 
         btn_logout.setOnClickListener(this);
-
+        btn_account_go_back.setOnClickListener(this);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -63,6 +64,9 @@ public class YourAccountActivity extends AppCompatActivity
                 FirebaseAuth.getInstance().signOut(); //logout
                 startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
                 finish();
+                break;
+            case R.id.btn_account_go_back:
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 break;
         }
     }

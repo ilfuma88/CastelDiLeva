@@ -4,21 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     tools:context=".MainActivity">
 
-    <GridView
-        android:id="@+id/gvCategories"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="auto_fit"
-        android:gravity="center"
-        android:columnWidth="@dimen/gvCategoriesColumnWidth"
-        android:verticalSpacing="@dimen/gvCategoriesVerticalSpacing"
-        android:layout_marginTop="8dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/castel_di_leva_lunga" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_tv_bg"
+        android:padding="@dimen/tv_padding_large"
+        android:text="@string/btn_activities"
+        android:textAlignment="center"
+        android:textSize="@dimen/tv_title_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/gvCategories"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:columnWidth="@dimen/gvCategoriesColumnWidth"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="@dimen/gvCategoriesVerticalSpacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" >
+
+    </GridView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

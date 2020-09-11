@@ -24,7 +24,7 @@
         android:id="@+id/tvDealsTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_distance_small"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_tv_bg"
         android:padding="@dimen/tv_padding_large"
         android:text="@string/text_tvDealsTitle"
@@ -53,9 +53,7 @@
                 android:id="@+id/tvDeals"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_distance_small"
-                android:layout_marginTop="@dimen/margin_distance_large"
-                android:layout_marginEnd="@dimen/margin_distance_small"
+                android:layout_marginTop="24dp"
                 android:background="@android:drawable/editbox_dropdown_light_frame"
                 android:backgroundTint="?android:attr/textColorSecondaryInverse"
                 android:fontFamily="@font/aclonica"
@@ -74,7 +72,9 @@
                 android:layout_marginStart="@dimen/margin_distance_small"
                 android:layout_marginTop="@dimen/margin_distance_large"
                 android:layout_marginEnd="@dimen/margin_distance_small"
+                android:background="@drawable/bg_tv_faded_white_large"
                 android:orientation="vertical"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
                 app:cardElevation="@dimen/cv_elevation_dimension"
                 app:contentPadding="@dimen/cv_padding_small"
@@ -86,7 +86,7 @@
                     android:id="@+id/clCvDiscount"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#80A691CA">
+                    android:background="@drawable/bg_tv_faded_white_large">
 
                     <TextView
                         android:id="@+id/tvDiscount"
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/aclonica"
                         android:text="@string/text_tvDiscount"
-                        android:textSize="@dimen/tvTextSize"
+                        android:textSize="@dimen/tv_deal_dim"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +112,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 android:layout_marginBottom="@dimen/margin_distance_large"
                 android:orientation="vertical"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
                 app:cardElevation="@dimen/cv_elevation_dimension"
                 app:contentPadding="@dimen/cv_padding_small"
@@ -124,7 +125,7 @@
                     android:id="@+id/clCvComplimentaryServices"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#80A691CA">
+                    android:background="@drawable/bg_tv_faded_white_large">
 
                     <TextView
                         android:id="@+id/tvComplimentaryServices"
@@ -132,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/aclonica"
                         android:text="@string/text_tvComplimentaryServices"
-                        android:textSize="@dimen/tvTextSize"
+                        android:textSize="@dimen/tv_deal_dim"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -149,6 +150,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 android:layout_marginBottom="@dimen/margin_distance_large"
                 android:orientation="vertical"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="@dimen/cv_corner_radius_dimension"
                 app:cardElevation="@dimen/cv_elevation_dimension"
                 app:contentPadding="@dimen/cv_padding_small"
@@ -160,7 +162,7 @@
                     android:id="@+id/clCvSpecialPackets"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#80A691CA">
+                    android:background="@drawable/bg_tv_faded_white_large">
 
                     <TextView
                         android:id="@+id/tvSpecialPackets"
@@ -168,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/aclonica"
                         android:text="@string/text_tvSpecialPackets"
-                        android:textSize="@dimen/tvTextSize"
+                        android:textSize="@dimen/tv_deal_dim"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

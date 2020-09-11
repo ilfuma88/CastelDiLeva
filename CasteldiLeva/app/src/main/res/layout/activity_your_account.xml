@@ -97,16 +97,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
         android:padding="@dimen/tv_padding_small"
         android:text="@string/tv_your_cellphone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_light_account"
         app:layout_constraintStart_toEndOf="@+id/iv_personal_photo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_yourEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_yourEmail"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_account_go_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/custom_button"
         android:padding="@dimen/btn_padding"
@@ -114,6 +118,7 @@
         android:textColor="@color/col_dark_txt"
         android:textSize="@dimen/btn_txt_size"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_logout"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
