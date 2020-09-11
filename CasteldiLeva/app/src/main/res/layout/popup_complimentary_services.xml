@@ -18,7 +18,7 @@
         android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvMimmi"
+        android:id="@+id/cvEscape4Travel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ibtnClosePopup"
@@ -32,177 +32,131 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvMimmi"
-                android:layout_width="match_parent"
+                android:id="@+id/tvEscapeTravelTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/aclonica"
                 android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvMimmi"
+                android:text="@string/text_tvEscapeTravelTitle"
                 android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEscapeTravelServices1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvEscapeTravelServices1"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEscapeTravelTitle" />
+
+            <TextView
+                android:id="@+id/tvEscapeTravelServices2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvEscapeTravelServices2"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEscapeTravelServices1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvEdilPavone"
+        android:id="@+id/cvLudoPiccoloPrincipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cvMimmi"
+        android:layout_below="@id/cvEscape4Travel"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/margin_distance_small"
         android:layout_marginTop="@dimen/margin_distance_small"
-        android:layout_marginEnd="@dimen/margin_distance_small" >
+        android:layout_marginEnd="@dimen/margin_distance_small">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvEdilPavone"
-                android:layout_width="match_parent"
+                android:id="@+id/tvLudoPiccPrincTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/aclonica"
                 android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvEdilPavone"
+                android:text="@string/text_tvLudoPiccPrincTitle"
                 android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvLudoPiccPrincServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvLudoPiccPrincServices"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLudoPiccPrincTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvMGGioielli"
+        android:id="@+id/cvADFisio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cvEdilPavone"
+        android:layout_below="@id/cvLudoPiccoloPrincipe"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/margin_distance_small"
         android:layout_marginTop="@dimen/margin_distance_small"
-        android:layout_marginEnd="@dimen/margin_distance_small" >
+        android:layout_marginEnd="@dimen/margin_distance_small">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvMGGioielli"
-                android:layout_width="match_parent"
+                android:id="@+id/tvADFisioTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/aclonica"
                 android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvMGGioielli"
+                android:text="@string/text_tvADFisioTitle"
                 android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMash"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cvMGGioielli"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/margin_distance_small"
-        android:layout_marginTop="@dimen/margin_distance_small"
-        android:layout_marginEnd="@dimen/margin_distance_small" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvMash"
-                android:layout_width="match_parent"
+                android:id="@+id/tvADFisioServices"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/aclonica"
-                android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvMash"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvADFisioServices"
                 android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/tvADFisioTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvDeGustibusCaffe"
+        android:id="@+id/cvPizzeriaLeSorelle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cvMash"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/margin_distance_small"
-        android:layout_marginTop="@dimen/margin_distance_small"
-        android:layout_marginEnd="@dimen/margin_distance_small" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tvDeGustibusCaffe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
-                android:fontFamily="@font/aclonica"
-                android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvDeGustibusCaffe"
-                android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvBorgoMerlo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cvDeGustibusCaffe"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/margin_distance_small"
-        android:layout_marginTop="@dimen/margin_distance_small"
-        android:layout_marginEnd="@dimen/margin_distance_small" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tvBorgoMerlo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
-                android:fontFamily="@font/aclonica"
-                android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvBorgoMerlo"
-                android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCaf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cvBorgoMerlo"
+        android:layout_below="@id/cvADFisio"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/margin_distance_small"
         android:layout_marginTop="@dimen/margin_distance_small"
@@ -214,18 +168,29 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvCaf"
-                android:layout_width="match_parent"
+                android:id="@+id/tvPizzeriaLeSorelleTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/aclonica"
                 android:padding="@dimen/tv_padding_large"
-                android:text="@string/text_tvCaf"
+                android:text="@string/text_tvPizzeriaLeSorelleTitle"
                 android:textSize="@dimen/tvTextSize"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPizzeriaLeSorelleServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvPizzeriaLeSorelleServices"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPizzeriaLeSorelleTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

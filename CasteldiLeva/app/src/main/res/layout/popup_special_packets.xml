@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlPopupDiscount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAFFFFFF"
+    android:padding="@dimen/tv_padding_small">
+
+    <ImageButton
+        android:id="@+id/ibtnClosePopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPartyShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ibtnClosePopup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/margin_distance_small"
+        android:layout_marginTop="@dimen/margin_distance_small"
+        android:layout_marginEnd="@dimen/margin_distance_small" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPartyShopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_large"
+                android:text="@string/text_tvPartyShopTitle"
+                android:textSize="@dimen/tvTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPartyShopSpecialPackages1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvPartyShopSpecialPackages1"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPartyShopTitle" />
+
+            <TextView
+                android:id="@+id/tvPartyShopSpecialPackages2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvPartyShopSpecialPackages2"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPartyShopSpecialPackages1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEsteticaBioBeauty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvPartyShop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/margin_distance_small"
+        android:layout_marginTop="@dimen/margin_distance_small"
+        android:layout_marginEnd="@dimen/margin_distance_small"
+        android:layout_marginBottom="@dimen/margin_distance_small">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvEsteticaBioBeautyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_large"
+                android:text="@string/text_tvEsteticaBioBeautyTitle"
+                android:textSize="@dimen/tvTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEsteticaBioBeautySpecialPackages1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvEsteticaBioBeautySpecialPackages1"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEsteticaBioBeautyTitle" />
+
+            <TextView
+                android:id="@+id/tvEsteticaBioBeautySpecialPackages2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_small"
+                android:text="@string/text_tvEsteticaBioBeautySpecialPackages2"
+                android:textSize="@dimen/tvTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEsteticaBioBeautySpecialPackages1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
