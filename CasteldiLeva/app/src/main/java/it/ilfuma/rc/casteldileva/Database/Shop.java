@@ -18,6 +18,8 @@ public class Shop implements Parcelable {
     public String shopName;
     @ColumnInfo(name = "shopDescription")
     public String shopDescription;
+    @ColumnInfo(name = "shopMail")
+    public String shopMail;
     @ColumnInfo(name = "shopWebsite")
     public String shopWebsite;
     @ColumnInfo(name = "shopNumber1")
@@ -28,18 +30,18 @@ public class Shop implements Parcelable {
     public String shopPosition;
     @ColumnInfo(name = "shopLogo")
     public String shopLogo;
-    @ColumnInfo(name = "discount10")
-    public String discount10;
-    @ColumnInfo(name = "condition10" )
-    public String condition10;
-    @ColumnInfo(name = "complimentaryService")
-    public String complimentaryService;
-    @ColumnInfo(name = "conditionComplimentary")
-    public String conditionComplimentary;
-    @ColumnInfo(name = "specialPackage")
-    public String specialPackage;
-    @ColumnInfo(name = "conditionSpecial")
-    public String conditionSpecial;
+    @ColumnInfo(name = "discount1")
+    public String discount1;
+    @ColumnInfo(name = "condition1" )
+    public String condition1;
+    @ColumnInfo(name = "discount2")
+    public String discount2;
+    @ColumnInfo(name = "condition2")
+    public String condition2;
+    @ColumnInfo(name = "discount3")
+    public String discount3;
+    @ColumnInfo(name = "condition3")
+    public String condition3;
 
     @Override
     public int describeContents() {
@@ -63,17 +65,18 @@ public class Shop implements Parcelable {
         parcel.writeInt(categoryId);
         parcel.writeString(shopName);
         parcel.writeString(shopDescription);
+        parcel.writeString(shopMail);
         parcel.writeString(shopWebsite);
         parcel.writeString(shopNumber1);
         parcel.writeString(shopNumber2);
         parcel.writeString(shopPosition);
         parcel.writeString(shopLogo);
-        parcel.writeString(discount10);
-        parcel.writeString(condition10);
-        parcel.writeString(complimentaryService);
-        parcel.writeString(conditionComplimentary);
-        parcel.writeString(specialPackage);
-        parcel.writeString(conditionSpecial);
+        parcel.writeString(discount1);
+        parcel.writeString(condition1);
+        parcel.writeString(discount2);
+        parcel.writeString(condition2);
+        parcel.writeString(discount3);
+        parcel.writeString(condition3);
     }
 
     public Shop(){
@@ -84,17 +87,18 @@ public class Shop implements Parcelable {
     private Shop(Parcel in){
         categoryId = in.readInt();
         shopName = in.readString();
+        shopMail = in.readString();
         shopDescription = in.readString();
         shopWebsite = in.readString();
         shopNumber1 = in.readString();
         shopNumber2 = in.readString();
         shopPosition = in.readString();
         shopLogo = in.readString();
-        discount10 = in.readString();
-        condition10 = in.readString();
-        complimentaryService = in.readString();
-        conditionComplimentary = in.readString();
-        specialPackage = in.readString();
-        conditionSpecial = in.readString();
+        discount1 = in.readString();
+        condition1 = in.readString();
+        discount2 = in.readString();
+        condition2 = in.readString();
+        discount3 = in.readString();
+        condition3 = in.readString();
     }
 }

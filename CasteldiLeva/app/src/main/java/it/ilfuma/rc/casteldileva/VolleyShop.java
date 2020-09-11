@@ -34,9 +34,16 @@ abstract class VolleyShop implements Response.ErrorListener, Response.Listener<S
     abstract void fill(List<Shop> snt);
 
     public void searchShopsByCategoryId(String id) {
-        String url = "https://my-json-server.typicode.com/fabiobf96/SimpleJson/shops?categoryId=%s";
-        url = String.format(url, id);
-        apiCall(url);
+        if (Integer.parseInt(id) < 10){
+            String url = "https://my-json-server.typicode.com/fabiobf96/shopJson/shops?categoryId=%s";
+            url = String.format(url, id);
+            apiCall(url);
+        }
+        else {
+            String url = "https://my-json-server.typicode.com/fabiobf96/shop1Json/shops?categoryId=%s";
+            url = String.format(url, id);
+            apiCall(url);
+        }
     }
 
     private void apiCall(String url) {
