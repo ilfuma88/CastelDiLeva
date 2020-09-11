@@ -42,6 +42,7 @@ public class HomeActivity extends AppCompatActivity
         switch (v.getId()) {
             case R.id.btn_yourAccount:
                 startActivity(new Intent(getApplicationContext(), YourAccountActivity.class));
+                finish();
                 break;
             case R.id.btn_Shops:
                 startActivity(new Intent(getApplicationContext(), CategoryActivity.class));

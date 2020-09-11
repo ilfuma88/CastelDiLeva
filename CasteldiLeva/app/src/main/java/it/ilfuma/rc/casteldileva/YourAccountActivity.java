@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -61,13 +62,25 @@ public class YourAccountActivity extends AppCompatActivity
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_logout:
-                FirebaseAuth.getInstance().signOut(); //logout
-                startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
-                finish();
+                fAuth.signOut(); //logout
+                if(fAuth.getCurrentUser() == null){
+                    startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
+                    finish();
+                }else{
+                    Log.d("TAG", "user didnt logout");
+                }
                 break;
             case R.id.btn_account_go_back:
                 startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                finish();
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        finish();
+    }
+
 }

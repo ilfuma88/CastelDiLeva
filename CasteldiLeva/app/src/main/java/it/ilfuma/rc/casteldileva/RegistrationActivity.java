@@ -58,12 +58,15 @@ public class RegistrationActivity extends AppCompatActivity
         btn_register.setOnClickListener(this);
         btn_login.setOnClickListener(this);
 
-        FirebaseUser user = fAuth.getCurrentUser(); //test line can be removed
-
+        //FirebaseUser user = fAuth.getCurrentUser(); //test line can be removed
+/*
         if(user != null){
-            startActivity(new Intent(getApplicationContext(), YourAccountActivity.class));  //non e' questal'activity che dovra' lanciare in realta'
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));  //non e' questal'activity che dovra' lanciare in realta'
             finish();
+        }else{
+            Log.d("TAG", "uccidetemi");
         }
+ */
     }
 
     @Override
@@ -83,7 +86,7 @@ public class RegistrationActivity extends AppCompatActivity
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    et_email.setError("La password è necessaria");
+                    et_password.setError("La password è necessaria");
                     break; //l'indianino qui mette un return
                 }
                 if(!(password.equals(repeatPassword))){
