@@ -64,7 +64,7 @@ public class YourAccountActivity extends AppCompatActivity
             case R.id.btn_logout:
                 fAuth.signOut(); //logout
                 if(fAuth.getCurrentUser() == null){
-                    startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 }else{
                     Log.d("TAG", "user didnt logout");
