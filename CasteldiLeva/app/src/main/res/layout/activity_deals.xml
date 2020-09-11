@@ -8,14 +8,41 @@
     android:background="#E39898"
     tools:context=".DealsActivity">
 
-    <ScrollView
-        android:id="@+id/svDeals"
+    <ImageView
+        android:id="@+id/ivDealsBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/castel_di_leva_lunga" />
+
+    <TextView
+        android:id="@+id/tvDealsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_distance_small"
+        android:background="@drawable/custom_tv_bg"
+        android:padding="@dimen/tv_padding_large"
+        android:text="@string/text_tvDealsTitle"
+        android:textAlignment="center"
+        android:textSize="@dimen/tv_title_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svDeals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_distance_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDealsTitle">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clDeals"
@@ -29,8 +56,12 @@
                 android:layout_marginStart="@dimen/margin_distance_small"
                 android:layout_marginTop="@dimen/margin_distance_large"
                 android:layout_marginEnd="@dimen/margin_distance_small"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:backgroundTint="?android:attr/textColorSecondaryInverse"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/text_tvDeals"
+                android:textAlignment="center"
+                android:textColor="@color/col_dark_txt"
                 android:textSize="@dimen/tvTextSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

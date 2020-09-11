@@ -33,4 +33,5 @@
     <string name="text_tvComplimentaryServices">Servizi omaggio</string>
     <string name="text_tvSpecialPackets">Pacchetti Speciali</string>
     <string name="text_tvDeals">Ecco le attività che offrono pacchetti speciali, servizi omaggio e offerte ai clienti con un buono fedeltà.</string>
+    <string name="text_tvDealsTitle">Offerte</string>
 </resources>
