@@ -4,7 +4,7 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="cvCategoryWidth">188dp</dimen>
     <dimen name="cvCategoryHeight">116dp</dimen>
-    <dimen name="cvCategoryRadius">30dp</dimen>
+    <dimen name="cvCategoryRadius">20dp</dimen>
     <dimen name="tvCategoryTextSize">16dp</dimen>
     <dimen name="gvCategoriesColumnWidth">205dp</dimen>
     <dimen name="gvCategoriesVerticalSpacing">16dp</dimen>
