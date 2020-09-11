@@ -29,7 +29,7 @@ public class YourCouponActivity extends AppCompatActivity {
     FirebaseAuth fAuth = FirebaseAuth.getInstance();
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     ImageView iv_qr;
-    TextView tv_numberOfCoupon, tv_noCoupons, tv_howTo;
+    TextView tv_numberOfCoupon, tv_noCoupons, tv_howTo, tvNoCoup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class YourCouponActivity extends AppCompatActivity {
         tv_howTo = findViewById(R.id.tv_howTo);
         tv_noCoupons = findViewById(R.id.tv_noCoupons);
         iv_qr = findViewById(R.id.iv_qr);
+        tvNoCoup = findViewById(R.id.tvNoCoup);
 
         DocumentReference docRef = fStore.collection(("users")).document(fAuth.getUid()); // praticamente il figlio di puttana sta importando ill documento daL cloud e per farlo gli da un mezzo path sempificato (ADORO)
         docRef.addSnapshotListener(this, new EventListener<DocumentSnapshot>() { // lo snapshotlisteneer e' un modo del cazzo  per leggere il doc, perche crea u oggetto chh viene aggiornato  ad ogni modifica sul  backend, si sarebbe potuto usafre un semplice get
@@ -50,7 +51,8 @@ public class YourCouponActivity extends AppCompatActivity {
                     tv_numberOfCoupon.setText("0");
                     tv_howTo.setVisibility(View.GONE);
                     tv_noCoupons.setVisibility(View.VISIBLE);
-                    iv_qr.setVisibility(View.GONE);
+                    tvNoCoup.setVisibility(View.VISIBLE);
+                    //iv_qr.setVisibility(View.GONE);
                 }else {
                     tv_numberOfCoupon.setText(NOfCoupon);
                     Log.d("TAG", "coupon" + NOfCoupon);
@@ -63,6 +65,7 @@ public class YourCouponActivity extends AppCompatActivity {
                     Bitmap bitmap = qrgEncoder.getBitmap();
                     // Setting Bitmap to ImageView
                     iv_qr.setImageBitmap(bitmap);
+                    tvNoCoup.setVisibility(View.INVISIBLE);
                 }
             }
         });

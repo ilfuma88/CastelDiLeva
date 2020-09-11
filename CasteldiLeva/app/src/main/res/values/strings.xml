@@ -34,4 +34,7 @@
     <string name="text_tvSpecialPackets">Pacchetti Speciali</string>
     <string name="text_tvDeals">Ecco le attività che offrono pacchetti speciali, servizi omaggio e offerte ai clienti con un buono fedeltà.</string>
     <string name="text_tvDealsTitle">Offerte</string>
+    <string name="tv_available_coupons">Numero di coupon disponibili: </string>
+    <string name="tv_show_coupon">Mostra il QR alle attività aderenti per avere lo sconto</string>
+    <string name="tv_no_coupon">Visita un\'attvità aderente per riceverne uno, oppure nella Home clicca su "Come funziona", per scoprire come avere sconti stupendi nel tuo bellissimo quartiere</string>
 </resources>

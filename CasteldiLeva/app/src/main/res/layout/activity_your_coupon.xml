@@ -6,58 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".YourCouponActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/torre_santuario_cut" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.174"
+        app:srcCompat="@drawable/bg_tv_white_faded_rect" />
+
     <TextView
         android:id="@+id/tv_youHaveCoupons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I Tuoi Coupon Disponibili Sono:"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:text="@string/tv_available_coupons"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/tvTextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/tv_numberOfCoupon"
-        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/tv_numberOfCoupon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="24dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.167" />
+        android:textAlignment="viewStart"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/et_textSize"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="179dp"
+        android:background="@drawable/custom_tv_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.447"
+        tools:srcCompat="@drawable/custom_tv_bg" />
 
     <ImageView
         android:id="@+id/iv_qr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/autoricambi" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/tv_howTo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_tv_faded_white_large"
         android:paddingStart="15sp"
         android:paddingLeft="15sp"
         android:paddingEnd="15sp"
         android:paddingRight="15sp"
-        android:text="Mostra il QR alle attivita' aderenti per avere lo sconto"
+        android:text="@string/tv_show_coupon"
+        android:textAlignment="center"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/tvTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,17 +106,55 @@
 
     <TextView
         android:id="@+id/tv_noCoupons"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_tv_faded_white_large"
         android:paddingStart="10sp"
         android:paddingLeft="10sp"
         android:paddingEnd="10sp"
         android:paddingRight="10sp"
-        android:text="Non hai Coupon, visita' un attvita' aderente per riceverne uno, oppure nella Home clicca su come funziona, per scoprir come avere sconti stupendi nel tuo bellissimo quartiere"
+        android:text="@string/tv_no_coupon"
+        android:textAlignment="center"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/et_textSize"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/iv_qr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_tv_bg"
+        android:padding="@dimen/tv_padding_large"
+        android:text="@string/btn_your_coupons"
+        android:textAlignment="center"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/tv_title_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_youHaveCoupons"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNoCoup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_tv_white_faded_rect"
+        android:text="Non hai coupon"
+        android:textAlignment="center"
+        android:textColor="@color/col_dark_txt"
+        android:textSize="@dimen/tvTextSize"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

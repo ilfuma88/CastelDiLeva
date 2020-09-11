@@ -67,6 +67,7 @@
         android:fontFamily="@font/aclonica"
         android:foregroundTint="#C0664B"
         android:padding="@dimen/tv_padding_large"
+        android:singleLine="true"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/col_dark_txt"
