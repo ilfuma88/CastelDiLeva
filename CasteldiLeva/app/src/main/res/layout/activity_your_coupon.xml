@@ -7,10 +7,10 @@
     tools:context=".YourCouponActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_youHaveCoupons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="I Tuoi Coupon Disponibili Sono:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_numberOfCoupon"
         app:layout_constraintHorizontal_bias="0.211"
@@ -48,4 +48,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/autoricambi" />
+
+    <TextView
+        android:id="@+id/tv_howTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15sp"
+        android:paddingLeft="15sp"
+        android:paddingEnd="15sp"
+        android:paddingRight="15sp"
+        android:text="Mostra il QR alle attivita' aderenti per avere lo sconto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_qr" />
+
+    <TextView
+        android:id="@+id/tv_noCoupons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10sp"
+        android:paddingLeft="10sp"
+        android:paddingEnd="10sp"
+        android:paddingRight="10sp"
+        android:text="Non hai Coupon, visita' un attvita' aderente per riceverne uno, oppure nella Home clicca su come funziona, per scoprir come avere sconti stupendi nel tuo bellissimo quartiere"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/iv_qr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_youHaveCoupons"
+        app:layout_constraintVertical_bias="0.602" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,10 +3,12 @@ package it.ilfuma.rc.casteldileva;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +29,7 @@ public class YourCouponActivity extends AppCompatActivity {
     FirebaseAuth fAuth = FirebaseAuth.getInstance();
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     ImageView iv_qr;
-    TextView tv_numberOfCoupon;
+    TextView tv_numberOfCoupon, tv_noCoupons, tv_howTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class YourCouponActivity extends AppCompatActivity {
         setContentView(R.layout.activity_your_coupon);
 
         tv_numberOfCoupon = findViewById(R.id.tv_numberOfCoupon);
+        tv_howTo = findViewById(R.id.tv_howTo);
+        tv_noCoupons = findViewById(R.id.tv_noCoupons);
         iv_qr = findViewById(R.id.iv_qr);
 
         DocumentReference docRef = fStore.collection(("users")).document(fAuth.getUid()); // praticamente il figlio di puttana sta importando ill documento daL cloud e per farlo gli da un mezzo path sempificato (ADORO)
@@ -42,19 +46,31 @@ public class YourCouponActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 String NOfCoupon = documentSnapshot.getString("#coupon");
-                Log.d("TAG", NOfCoupon);
-                tv_numberOfCoupon.setText(NOfCoupon);
-                Log.d("TAG", "coupon" + NOfCoupon);
-                String coupon = documentSnapshot.getString("coupon" + NOfCoupon);
+                if  (NOfCoupon == null || NOfCoupon == "0") {
+                    tv_numberOfCoupon.setText("0");
+                    tv_howTo.setVisibility(View.GONE);
+                    tv_noCoupons.setVisibility(View.VISIBLE);
+                    iv_qr.setVisibility(View.GONE);
+                }else {
+                    tv_numberOfCoupon.setText(NOfCoupon);
+                    Log.d("TAG", "coupon" + NOfCoupon);
+                    String coupon = documentSnapshot.getString("coupon" + NOfCoupon);
 
-                QRGEncoder qrgEncoder = new QRGEncoder(coupon, null, QRGContents.Type.TEXT, 500);
-                qrgEncoder.setColorBlack(Color.RED);
-                qrgEncoder.setColorWhite(Color.BLUE);
-                // Getting QR-Code as Bitmap
-                Bitmap bitmap = qrgEncoder.getBitmap();
-                // Setting Bitmap to ImageView
-                iv_qr.setImageBitmap(bitmap);
+                    QRGEncoder qrgEncoder = new QRGEncoder(coupon, null, QRGContents.Type.TEXT, 500);
+                    qrgEncoder.setColorBlack(Color.RED);
+                    qrgEncoder.setColorWhite(Color.BLUE);
+                    // Getting QR-Code as Bitmap
+                    Bitmap bitmap = qrgEncoder.getBitmap();
+                    // Setting Bitmap to ImageView
+                    iv_qr.setImageBitmap(bitmap);
+                }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        finish();
     }
 }
