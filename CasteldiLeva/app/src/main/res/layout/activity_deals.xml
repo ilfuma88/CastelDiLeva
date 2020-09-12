@@ -5,7 +5,6 @@
     android:id="@+id/clDealsActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E39898"
     tools:context=".DealsActivity">
 
     <ImageView
@@ -29,7 +28,7 @@
         android:padding="@dimen/tv_padding_large"
         android:text="@string/text_tvDealsTitle"
         android:textAlignment="center"
-        android:textSize="@dimen/tv_title_large"
+        android:textSize="@dimen/tv_title_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

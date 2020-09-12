@@ -68,7 +68,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
-                    android:background="@drawable/bg_tv_faded_white_large"
+                    android:background="@drawable/bg_tv_faded_white_xl"
                     android:padding="@dimen/tv_padding_small"
                     android:paddingLeft="10sp"
                     android:text="@string/tv_who_we_are_2"

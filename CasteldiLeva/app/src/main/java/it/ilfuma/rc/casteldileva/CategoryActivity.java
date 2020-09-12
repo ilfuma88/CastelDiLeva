@@ -25,7 +25,7 @@ public class CategoryActivity extends AppCompatActivity {
 
             Holder() {
                 textCategorie = new String[]{"Abbigliamento", "Agenzia di viaggio", "Alimenti zootecnici","Autoricambi", "Bar/Tavola Calda", "CAF", "Cartolerie", "Centro Estetico", "Cialde/Capsule",
-                        "dentista", "Edilizia/Ferramenta", "Fisioterapia", "Gioielleria", "Ludoteca", "Ristornate/Pizzeria", "Sport", "Tipografia", "Vivai/Fiorai"};
+                        "Dentista", "Edilizia/Ferramenta", "Fisioterapia", "Gioielleria", "Ludoteca", "Ristorante/Pizzeria", "Sport", "Tipografia", "Vivai/Fiorai"};
 
                 imgCategorie = new Integer[]{R.drawable.negozi_abbigliamento, R.drawable.agenzia_di_viaggio, R.drawable.pet_shop,  R.drawable.autoricambi, R.drawable.bar_tavolacalda, R.drawable.caf,
                         R.drawable.cartoleria, R.drawable.centro_estetico, R.drawable.cialde_capsule, R.drawable.dentista,

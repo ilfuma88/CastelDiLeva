@@ -9,6 +9,8 @@
     <dimen name="gvCategoriesColumnWidth">205dp</dimen>
     <dimen name="gvCategoriesVerticalSpacing">16dp</dimen>
     <dimen name="tvTextSize">18sp</dimen>
+    <dimen name="tv_txt_small">14sp</dimen>
+    <dimen name="btn_txt_small">14sp</dimen>
     <dimen name="et_textSize">18sp</dimen>
     <dimen name="btn_txt_size">17sp</dimen>
     <dimen name="ivLogoWidth">100dp</dimen>
