@@ -30,4 +30,6 @@
     <dimen name="cv_padding_small">4dp</dimen>
     <dimen name="cv_height_medium">150dp</dimen>
     <dimen name="tv_deal_dim">20sp</dimen>
+    <dimen name="iv_width_medium">160dp</dimen>
+    <dimen name="iv_height_medium">160dp</dimen>
 </resources>

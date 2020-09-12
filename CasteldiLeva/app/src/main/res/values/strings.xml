@@ -62,4 +62,8 @@
     <string name="text_tvEsteticaBioBeautyTitle">Estetica Bio Beauty</string>
     <string name="text_tvEsteticaBioBeautySpecialPackages1">Sconto 20% Su Trattamenti Estetici (Spesa minima 65€)</string>
     <string name="text_tvEsteticaBioBeautySpecialPackages2">Sconto - 15% Su acquisto di prodotti viso, corpo, make-up (Spesa minima 55€)</string>
+    <string name="text_tvShopName">ShopName</string>
+    <string name="text_tvShopDescription">ShopDescription</string>
+    <string name="text_contentDescription_ivShopLogo">Shop Logo</string>
+    <string name="text_tvContacts">Contatti</string>
 </resources>
