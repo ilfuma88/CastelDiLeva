@@ -57,50 +57,45 @@ public class RegistrationActivity extends AppCompatActivity
         tv_whoWeAre.setOnClickListener(this);
         btn_register.setOnClickListener(this);
         btn_login.setOnClickListener(this);
-/*
-        FirebaseUser user = fAuth.getCurrentUser(); //test line can be removed
 
-        if(user != null){
-            startActivity(new Intent(getApplicationContext(), HomeActivity.class));  //non e' questal'activity che dovra' lanciare in realta'
-            finish();
-        }else{
-            Log.d("TAG", "uccidetemi");
-        }
-*/
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_register:
-
+                /*
+                Registration of a  new user in the APP
+                 */
                 progressBar.setVisibility(View.VISIBLE);
 
                 final String email = et_email.getText().toString().trim();
                 String password = et_password.getText().toString().trim();
                 String repeatPassword = et_repeatPassword.getText().toString().trim();
                 final String fullName = et_fullName.getText().toString().trim();
+
+                // checking if the fields are well filled
                 if(TextUtils.isEmpty(email)){
                     et_email.setError("L'email è necessaria");
-                    break; //l'indianino qui mette un return
+                    break;
                 }
 
                 if(TextUtils.isEmpty(password)){
                     et_password.setError("La password è necessaria");
-                    break; //l'indianino qui mette un return
+                    break;
                 }
                 if(!(password.equals(repeatPassword))){
                     et_repeatPassword.setError("La password non coincide con la ripetizione");
                     break; //l'indianino qui mette un return
                 }
 
-                //register the user in firebase
+                //registering the user in firebase
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        /**
-                         * da qui si scrive sul database
+                        /*
+                         * writing in the database
                          */
                         if(task.isSuccessful()){
                             Toast.makeText( RegistrationActivity.this, "User Created.", Toast.LENGTH_SHORT).show();

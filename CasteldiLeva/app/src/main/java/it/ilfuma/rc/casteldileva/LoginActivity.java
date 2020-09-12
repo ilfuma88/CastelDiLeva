@@ -52,21 +52,25 @@ public class LoginActivity extends AppCompatActivity
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login:
+                /*
+                 handling of login with email and password
+                 */
                 progressBar.setVisibility(View.VISIBLE);
 
                 String email = et_email.getText().toString().trim();
                 String password = et_password.getText().toString().trim();
 
+                //checking that EditText are not empty
                 if (TextUtils.isEmpty(email)) {
                     progressBar.setVisibility(View.GONE);
                     et_email.setError("L'email è necessaria");
-                    break; //l'indianino qui mette un return
+                    break;
                 }
 
                 if (TextUtils.isEmpty(password)) {
                     progressBar.setVisibility(View.GONE);
                     et_email.setError("La password è necessaria");
-                    break; //l'indianino qui mette un return
+                    break;
                 }
 
                 //Login the user

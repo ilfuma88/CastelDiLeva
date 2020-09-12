@@ -23,12 +23,10 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAG", fAuth.getCurrentUser().getDisplayName());
             Log.d("TAG", fAuth.getUid());
             setContentView(R.layout.activity_main);
-            Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }else{
             setContentView(R.layout.activity_main);
-            Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }

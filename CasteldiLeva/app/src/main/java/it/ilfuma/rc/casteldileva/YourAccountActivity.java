@@ -90,8 +90,8 @@ public class YourAccountActivity extends AppCompatActivity
 
         userId = fAuth.getUid();    //l'indiano usa: fAuth.getCurrentUser().getUid();
 
-        //now we will retrive the data from the damn firestore (cool stuff!!)
-        DocumentReference docRef = fStore.collection(("users")).document(userId ); // praticamente il figlio di puttana sta importando ill documento daL cloud e per farlo gli da un mezzo path sempificato (ADORO)
+        //now we will retrive user data from firestore database
+        DocumentReference docRef = fStore.collection(("users")).document(userId ); //
         docRef.addSnapshotListener(this, new EventListener<DocumentSnapshot>() { // lo snapshotlisteneer e' un modo del cazzo  per leggere il doc, perche crea u oggetto chh viene aggiornato  ad ogni modifica sul  backend, si sarebbe potuto usafre un semplice get
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
