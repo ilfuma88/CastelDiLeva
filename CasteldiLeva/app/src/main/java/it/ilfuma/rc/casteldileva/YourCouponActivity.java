@@ -59,8 +59,8 @@ public class YourCouponActivity extends AppCompatActivity {
                     String coupon = documentSnapshot.getString("coupon" + NOfCoupon);
 
                     QRGEncoder qrgEncoder = new QRGEncoder(coupon, null, QRGContents.Type.TEXT, 500);
-                    qrgEncoder.setColorBlack(Color.RED);
-                    qrgEncoder.setColorWhite(Color.BLUE);
+                    qrgEncoder.setColorBlack(Color.BLACK);
+                    qrgEncoder.setColorWhite(Color.WHITE);
                     // Getting QR-Code as Bitmap
                     Bitmap bitmap = qrgEncoder.getBitmap();
                     // Setting Bitmap to ImageView

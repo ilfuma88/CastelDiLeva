@@ -4,20 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.storage.StorageManager;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,9 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
-
-import java.io.File;
+import com.squareup.picasso.Picasso; //Library used to transform images to better fit into layouts and to reduce memory size
 
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
@@ -43,12 +37,13 @@ public class YourAccountActivity extends AppCompatActivity
                                     implements View.OnClickListener{
 
     TextView tv_yourName, tv_yourEmail, tvChoosePhoto;
-    Button btn_logout, btn_account_go_back;
+    Button btn_logout;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
     ImageView ivPersonalPhoto, ivQrUser;
     StorageReference mStorageRef;
+    ProgressBar progBarProfPhoto;
 
 
     @Override
@@ -60,27 +55,30 @@ public class YourAccountActivity extends AppCompatActivity
         tv_yourEmail =  findViewById(R.id.tv_yourEmail);
         tvChoosePhoto = findViewById(R.id.tvChangePhoto);
         btn_logout = findViewById(R.id.btn_logout);
-        btn_account_go_back = findViewById(R.id.btn_account_go_back);
         ivQrUser = findViewById(R.id.iv_qrcode_user);
         ivPersonalPhoto = findViewById(R.id.ivPersonalPhoto);
+        progBarProfPhoto = findViewById(R.id.progBarProfPhoto);
+        progBarProfPhoto.setVisibility(View.GONE);
 
         btn_logout.setOnClickListener(this);
-        btn_account_go_back.setOnClickListener(this);
         ivPersonalPhoto.setOnClickListener(this);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        //
+        //create a reference to a Firebase instance
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        //
-        final StorageReference profileRef = mStorageRef.child("users/"+fAuth.getUid()+"/profile.jpg");
 
+        //now we download the profilePicture that the user has already chosen, that has been already uploaded to Firebase and set it as profile picture
+        //create a child reference: profileRef now points to the path below
+        final StorageReference profileRef = mStorageRef.child("users/"+fAuth.getUid()+"/profile.jpg");
+            progBarProfPhoto.setVisibility(View.VISIBLE);
             profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
-                public void onSuccess(Uri uri) {
+                public void onSuccess(Uri uri) { //Uri representing the downloaded URL of the image
                     tvChoosePhoto.setVisibility(View.INVISIBLE);
                     Picasso.get().load(uri).into(ivPersonalPhoto);
+                    progBarProfPhoto.setVisibility(View.GONE);
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -102,6 +100,7 @@ public class YourAccountActivity extends AppCompatActivity
                     tv_yourEmail.setText(documentSnapshot.getString("email"));
                 }
 
+                //we assign a unique QRcode to the user
                 QRGEncoder qrgEncoder = new QRGEncoder(userId, null, QRGContents.Type.TEXT, 500);
                 qrgEncoder.setColorBlack(Color.BLACK);
                 qrgEncoder.setColorWhite(Color.WHITE);
@@ -127,10 +126,6 @@ public class YourAccountActivity extends AppCompatActivity
                     Log.d("TAG", "user didnt logout");
                 }
                 break;
-            case R.id.btn_account_go_back:
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                finish();
-                break;
             case R.id.ivPersonalPhoto:
                 //Intent that opens images
                 Intent intent = new Intent();
@@ -145,8 +140,9 @@ public class YourAccountActivity extends AppCompatActivity
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==1000 && resultCode==RESULT_OK && data!=null &&data.getData()!=null){
-            //the imageUri of the image that has been choosen
+            progBarProfPhoto.setVisibility(View.VISIBLE);
             tvChoosePhoto.setVisibility(View.INVISIBLE);
+            //the Uri of the image that has been choosen
             Uri imgUri = data.getData();
             uploadImgToFirebase(imgUri);
 
@@ -157,7 +153,7 @@ public class YourAccountActivity extends AppCompatActivity
     private void uploadImgToFirebase(Uri imageUri){
         //create a reference in Firebase Storage
         final StorageReference imgRef = mStorageRef.child("users/"+fAuth.getUid()+"/profile.jpg");
-        //put in that reference the imageUri of the choosen image
+        //put in the Firebase refernce that points to the path above the choosen image
         imgRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -165,8 +161,9 @@ public class YourAccountActivity extends AppCompatActivity
                 imgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {   //if the imageUri has been uploaded correctly
-                        //use Picasso library that sets the image uri into the ImageView of the layout
+                        //use Picasso library that sets the profile picture
                         Picasso.get().load(uri).into(ivPersonalPhoto);
+                        progBarProfPhoto.setVisibility(View.GONE);
                     }
                 });
             }
@@ -176,53 +173,6 @@ public class YourAccountActivity extends AppCompatActivity
             }
         });
     }
-
-
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
-            imgUri = data.getData();
-            ivPersonalPhoto.setImageURI(imgUri);
-        }
-    }
-
-    private String getExtension(Uri uri){
-        ContentResolver cr = getContentResolver();
-        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        return mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
-    }
-    private void FileSetter(){
-        StorageReference Ref = mStorageRef.child(System.currentTimeMillis()+"."+getExtension(imgUri));
-        Ref.putFile(imgUri)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        //Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                        Toast.makeText(YourAccountActivity.this, R.string.toast_img_uploaded, Toast.LENGTH_LONG).show();
-                        Log.w("onSuccess()", "uploaded");
-                        btnSetPhoto.setVisibility(View.INVISIBLE);
-                        btnBgSetPhoto.setVisibility(View.INVISIBLE);
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Handle unsuccessful uploads
-                        // ...
-                        Toast.makeText(YourAccountActivity.this, "Not uploaded", Toast.LENGTH_LONG).show();
-                        Log.w("onFailure()", "notUploaded");
-                    }
-                });
-    }
-
-    private void FileChoser(){
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 1);
-    }*/
 
     @Override
     public void onBackPressed() {

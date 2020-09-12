@@ -23,7 +23,7 @@ public class HowItWorksActivity extends AppCompatActivity {
     Context c = this;
 
     public class Holder implements View.OnClickListener{
-        MediaController myMediaController;
+        MediaController myMediaController; //view containg controls for playing the video
         Button btnPlay;
         VideoView vvHowItWorks;
         Context mC;
@@ -41,9 +41,9 @@ public class HowItWorksActivity extends AppCompatActivity {
         public void playVideo(){
             myMediaController = new MediaController(mC);
             vvHowItWorks.setMediaController(myMediaController);
-
+            //take the video resource from the raw folder
             String path = "android.resource://" + getPackageName() + "/raw/iorestoacasteldilevavid";
-
+            //Creates a Uri which parses the given encoded URI string.
             Uri u = Uri.parse(path);
 
             vvHowItWorks.setVideoURI(u);

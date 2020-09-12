@@ -16,7 +16,7 @@
     <dimen name="ivLogoWidth">100dp</dimen>
     <dimen name="ivLogoHeight">50dp</dimen>
     <dimen name="ivLogoShopHeight">150dp</dimen>
-    <dimen name="tv_title_large">25sp</dimen>
+    <dimen name="tv_title_large">24sp</dimen>
     <dimen name="tv_title_small">22sp</dimen>
     <dimen name="btn_padding">15dp</dimen>
     <dimen name="tv_padding_large">10dp</dimen>
