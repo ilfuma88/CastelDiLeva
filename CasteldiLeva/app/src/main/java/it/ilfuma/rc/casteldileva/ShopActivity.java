@@ -3,11 +3,13 @@ package it.ilfuma.rc.casteldileva;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -108,6 +110,17 @@ public class ShopActivity extends AppCompatActivity {
                 tvDiscount3.setText(shop.discount3);
             if (shop.condition3 != null && shop.condition3.compareTo("") != 0)
                 tvCondition3.setText(shop.condition3);
+
+            if (shop.shopNumber1 != null && shop.shopNumber1.compareTo("") != 0)
+                tvNumber1.setText(shop.shopNumber1);
+            if (shop.shopNumber2 != null && shop.shopNumber2.compareTo("") != 0)
+                tvNumber2.setText(shop.shopNumber2);
+            if (shop.shopWebsite == null || shop.shopWebsite.compareTo("") == 0)
+                ivWebsite.setVisibility(View.INVISIBLE);
+            if (shop.shopMail == null || shop.shopMail.compareTo("") == 0)
+                ivMail.setVisibility(View.INVISIBLE);
+            if (shop.shopPosition == null || shop.shopPosition.compareTo("") == 0)
+                ivMaps.setVisibility(View.INVISIBLE);
         }
 
         public void setImage(String shopLogo, final ImageView imageView) {
@@ -135,7 +148,38 @@ public class ShopActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-
+            if (v.getId() == R.id.tvNumber1) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(mShop.shopNumber1));
+                startActivity(intent);
+            }
+            if (v.getId() == R.id.tvNumber2) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(mShop.shopNumber2));
+                startActivity(intent);
+            }
+            if (v.getId() == R.id.ivWebsite) {
+                if (mShop.shopWebsite != null && mShop.shopWebsite.compareTo("") != 0) {
+                    Intent intentWebsite = new Intent(Intent.ACTION_VIEW);
+                    intentWebsite.setData(Uri.parse(mShop.shopWebsite));
+                    startActivity(intentWebsite);
+                }
+            }
+            if (v.getId() == R.id.ivMail) {
+                if (mShop.shopMail != null && mShop.shopMail.compareTo("") != 0) {
+                    Intent intentMail = new Intent(Intent.ACTION_SENDTO);
+                    intentMail.setData(Uri.parse("mailto:" + mShop.shopMail));
+                    startActivity(intentMail);
+                }
+            }
+            if (v.getId() == R.id.ivMaps) {
+                if (mShop.shopPosition != null && mShop.shopPosition.compareTo("") != 0) {
+                    Intent intentMaps = new Intent(Intent.ACTION_VIEW);
+                    intentMaps.setData(Uri.parse(mShop.shopPosition));
+                    startActivity(intentMaps);
+                }
+                //Toast.makeText(mContext, mShop.shopPosition, Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
