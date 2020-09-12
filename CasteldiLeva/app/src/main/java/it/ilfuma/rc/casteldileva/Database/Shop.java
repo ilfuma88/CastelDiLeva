@@ -87,8 +87,8 @@ public class Shop implements Parcelable {
     private Shop(Parcel in){
         categoryId = in.readInt();
         shopName = in.readString();
-        shopMail = in.readString();
         shopDescription = in.readString();
+        shopMail = in.readString();
         shopWebsite = in.readString();
         shopNumber1 = in.readString();
         shopNumber2 = in.readString();

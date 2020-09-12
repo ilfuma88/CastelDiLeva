@@ -34,8 +34,10 @@ public class ShopActivity extends AppCompatActivity {
         Holder(){
             intent = getIntent();
             shop = intent.getParcelableExtra("shop");
+
             ivLogo = findViewById(R.id.ivLogo);
             tvDescription = findViewById(R.id.tvDescription);
+
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             ImageRequest stringRequest = new ImageRequest(shop.shopLogo, new Response.Listener<Bitmap>() {
                 @Override
@@ -52,7 +54,8 @@ public class ShopActivity extends AppCompatActivity {
                         }
                     });
             requestQueue.add(stringRequest);
-            tvDescription.setText(shop.shopDescription);
+
+            tvDescription.setText(shop.shopMail);
         }
     }
 }
