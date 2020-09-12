@@ -5,7 +5,8 @@
     android:id="@+id/clShopDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="vertical" >
+    android:background="#000000"
+    android:scrollbars="vertical">
 
     <ScrollView
         android:id="@+id/svShopDetails"
@@ -29,7 +30,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clShopInfo"
@@ -94,7 +95,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cvShopInfo" >
+                app:layout_constraintTop_toBottomOf="@id/cvShopInfo">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clShopDeals1"
@@ -139,7 +140,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cvShopDeals1" >
+                app:layout_constraintTop_toBottomOf="@id/cvShopDeals1">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clShopDeals2"
@@ -184,7 +185,7 @@
                 android:layout_marginEnd="@dimen/margin_distance_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cvShopDeals2" >
+                app:layout_constraintTop_toBottomOf="@id/cvShopDeals2">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clShopDeals3"
@@ -231,7 +232,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cvShopDeals3" >
+                app:layout_constraintTop_toBottomOf="@id/cvShopDeals3">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
