@@ -22,6 +22,7 @@
     <string name="action_settings">Settings</string>
     <string name="btn_about_us">Chi siamo</string>
     <string name="tv_how_it_works">Come funziona l\'iniziativa</string>
+    <string name="tv_how_app_works">Per avere il tuo primo coupon recati in una delle attività aderenti all\’iniziativa e, dopo aver acquistato qualcosa in una qualsiasi di queste, vai su “Il mio account” e fai scannerizzare il tuo codice QR utente al venditore. \n A questo punto, nella sezione I miei coupon, avrai un coupon disponibile, che potrai utilizzare in una qualsiasi delle attività aderenti, semplicemente mostrando il codice QR sconto. \n I coupon possono essere utilizzati una volta ciascuno, ma se fai acquisti in più attività aderenti all’iniziativa, ne puoi cumulare quanti ne vuoi!</string>
     <string name="tv_create_new_account">Crea un nuovo account</string>
     <string name="et_hint_name_surname">Nome e Cognome</string>
     <string name="btn_back_to_login">Vai al Login</string>
@@ -34,12 +35,15 @@
     <string name="text_tvSpecialPackets">Pacchetti Speciali</string>
     <string name="text_tvDeals">Ecco le attività che offrono pacchetti speciali, servizi omaggio e offerte ai clienti con un buono fedeltà.</string>
     <string name="text_tvDealsTitle">Offerte</string>
+    <string name="tv_name">Nome: </string>
+    <string name="tv_email">Email: </string>
     <string name="tv_available_coupons">Numero di coupon disponibili: </string>
     <string name="tv_show_coupon">Mostra il QR alle attività aderenti per avere lo sconto</string>
     <string name="tv_no_coupon">Visita un\'attvità aderente per riceverne uno, oppure nella Home clicca su "Come funziona", per scoprire come avere sconti stupendi nel tuo bellissimo quartiere</string>
     <string name="tv_show_qr_user">Mostra il QR utente al venditore \n per ottenere un coupon</string>
-    <string name="btn_choose_photo">Scegli una foto</string>
+    <string name="tv_changephoto">Clicca sull\'immagine per cambiare foto</string>
     <string name="btn_set_photo">Imposta foto</string>
+    <string name="toast_img_uploaded">Immagine caricata correttamente</string>
     <string name="text_tvMimmi">Mimmi Abbigliamento Donna</string>
     <string name="text_tvEdilPavone">Nuova Edilizia Pavone (spesa minima 50€) ​</string>
     <string name="text_tvMGGioielli">MG Gioielli (prezzo dell\'oro bloccato a 40 €/gr Sconto 20% su acquisto nuovo orologio, se rottami uno vecchio)</string>
