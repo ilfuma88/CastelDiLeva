@@ -55,7 +55,7 @@ public class ShopActivity extends AppCompatActivity {
                     });
             requestQueue.add(stringRequest);
 
-            tvDescription.setText(shop.shopMail);
+            tvDescription.setText(shop.shopDescription);
         }
     }
 }
