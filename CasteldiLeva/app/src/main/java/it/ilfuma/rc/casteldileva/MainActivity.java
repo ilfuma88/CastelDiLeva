@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -18,17 +20,18 @@ public class MainActivity extends AppCompatActivity {
         fAuth= FirebaseAuth.getInstance();
 
         if (fAuth.getCurrentUser() != null) {
+            Log.d("TAG", fAuth.getCurrentUser().getDisplayName());
+            Log.d("TAG", fAuth.getUid());
             setContentView(R.layout.activity_main);
-            //Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_SHORT).show();
+            Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
-            finish();
         }else{
             setContentView(R.layout.activity_main);
-            //Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, RegistrationActivity.class);
+            Toast.makeText( MainActivity.this, "You went through MainActivity.", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
-            finish();
         }
+        finish();
     }
 }

@@ -52,12 +52,15 @@ public class HomeActivity extends AppCompatActivity
                 break;
             case R.id.btn_yourCoupons:
                 startActivity(new Intent(getApplicationContext(), YourCouponActivity.class));
+                finish();
                 break;
             case R.id.btn_howItWorks:
                 startActivity(new Intent(getApplicationContext(), HowItWorksActivity.class));
+                finish();
                 break;
             case R.id.btn_Deals:
                 startActivity(new Intent(getApplicationContext(), DealsActivity.class));
+                finish();
                 break;
         }
     }

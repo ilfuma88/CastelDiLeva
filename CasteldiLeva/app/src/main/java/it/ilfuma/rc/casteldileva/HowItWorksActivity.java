@@ -3,6 +3,7 @@ package it.ilfuma.rc.casteldileva;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -56,6 +57,12 @@ public class HowItWorksActivity extends AppCompatActivity {
                 playVideo();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        finish();
     }
 
 }

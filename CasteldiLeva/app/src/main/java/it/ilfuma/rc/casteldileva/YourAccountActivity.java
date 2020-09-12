@@ -50,12 +50,12 @@ public class YourAccountActivity extends AppCompatActivity
         docRef.addSnapshotListener(this, new EventListener<DocumentSnapshot>() { // lo snapshotlisteneer e' un modo del cazzo  per leggere il doc, perche crea u oggetto chh viene aggiornato  ad ogni modifica sul  backend, si sarebbe potuto usafre un semplice get
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                tv_yourName.setText(documentSnapshot.getString("fullName"));
-                tv_yourEmail.setText(documentSnapshot.getString("email"));
+                if (documentSnapshot !=  null){
+                    tv_yourName.setText(documentSnapshot.getString("fullName"));
+                    tv_yourEmail.setText(documentSnapshot.getString("email"));
+                }
             }
         });
-
-
     }
 
     @Override
@@ -63,8 +63,9 @@ public class YourAccountActivity extends AppCompatActivity
         switch (view.getId()) {
             case R.id.btn_logout:
                 fAuth.signOut(); //logout
+
                 if(fAuth.getCurrentUser() == null){
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(this, MainActivity.class));
                     finish();
                 }else{
                     Log.d("TAG", "user didnt logout");

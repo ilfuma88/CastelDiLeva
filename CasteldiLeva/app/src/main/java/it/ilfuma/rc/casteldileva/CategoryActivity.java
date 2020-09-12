@@ -47,4 +47,10 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        finish();
+    }
     }

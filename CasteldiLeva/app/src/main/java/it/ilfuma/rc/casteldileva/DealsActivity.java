@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -100,5 +101,11 @@ public class DealsActivity extends AppCompatActivity {
             ibtnClosePopup = popup.findViewById(R.id.ibtnClosePopup);
             ibtnClosePopup.setOnClickListener(this);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+        finish();
     }
 }

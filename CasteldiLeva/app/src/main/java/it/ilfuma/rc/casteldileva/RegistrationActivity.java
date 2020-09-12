@@ -57,16 +57,16 @@ public class RegistrationActivity extends AppCompatActivity
         tv_whoWeAre.setOnClickListener(this);
         btn_register.setOnClickListener(this);
         btn_login.setOnClickListener(this);
-
-        //FirebaseUser user = fAuth.getCurrentUser(); //test line can be removed
 /*
+        FirebaseUser user = fAuth.getCurrentUser(); //test line can be removed
+
         if(user != null){
             startActivity(new Intent(getApplicationContext(), HomeActivity.class));  //non e' questal'activity che dovra' lanciare in realta'
             finish();
         }else{
             Log.d("TAG", "uccidetemi");
         }
- */
+*/
     }
 
     @Override
