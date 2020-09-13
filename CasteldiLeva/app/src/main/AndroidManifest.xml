@@ -12,24 +12,36 @@
         android:roundIcon="@mipmap/ic_logo_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeAclonica_noActionBar">
-        <activity android:name=".DealsActivity"></activity>
-        <activity android:name=".HowItWorksActivity" />
-        <activity android:name=".ShopsActivity" />
-        <activity android:name=".CategoryActivity" />
-        <activity android:name=".ShopActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".WhoWeAreActivity" />
-        <activity android:name=".YourAccountActivity" />
-        <activity android:name=".YourCouponActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".DealsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".HowItWorksActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShopsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShopActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WhoWeAreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".YourAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".YourCouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegistrationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"
