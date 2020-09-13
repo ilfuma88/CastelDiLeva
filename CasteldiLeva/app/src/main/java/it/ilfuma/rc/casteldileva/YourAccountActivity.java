@@ -7,7 +7,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -77,10 +76,10 @@ public class YourAccountActivity extends AppCompatActivity
         //now we download the profilePicture that the user has already chosen, that has been already uploaded to Firebase and set it as profile picture
         //create a child reference: profileRef now points to the path below
         final StorageReference profileRef = mStorageRef.child("users/"+fAuth.getUid()+"/profile.jpg");
-            progBarProfPhoto.setVisibility(View.VISIBLE);
             profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) { //Uri representing the downloaded URL of the image
+                    progBarProfPhoto.setVisibility(View.VISIBLE);
                     tvChoosePhoto.setVisibility(View.INVISIBLE);
                     Picasso.get().load(uri).into(ivPersonalPhoto);
                     progBarProfPhoto.setVisibility(View.GONE);

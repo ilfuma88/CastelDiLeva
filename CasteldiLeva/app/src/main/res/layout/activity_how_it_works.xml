@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/bg_tv_faded_white_xl"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
                 android:padding="@dimen/cv_padding_small"
                 android:text="@string/tv_how_app_works"
                 android:textAlignment="center"
