@@ -76,16 +76,16 @@ public class RegistrationActivity extends AppCompatActivity
 
                 // checking if the fields are well filled
                 if(TextUtils.isEmpty(email)){
-                    et_email.setError("L'email è necessaria");
+                    et_email.setError(getResources().getString(R.string.text_etErrorEmail));
                     break;
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    et_password.setError("La password è necessaria");
+                    et_password.setError(getResources().getString(R.string.text_etErrorEmail));
                     break;
                 }
                 if(!(password.equals(repeatPassword))){
-                    et_repeatPassword.setError("La password non coincide con la ripetizione");
+                    et_repeatPassword.setError(getResources().getString(R.string.text_et_RepPass));
                     break; //l'indianino qui mette un return
                 }
 
@@ -98,7 +98,7 @@ public class RegistrationActivity extends AppCompatActivity
                          * writing in the database
                          */
                         if(task.isSuccessful()){
-                            Toast.makeText( RegistrationActivity.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText( RegistrationActivity.this, getResources().getString(R.string.toast_user_created), Toast.LENGTH_SHORT).show();
                             userId = fAuth.getCurrentUser().getUid();
                             DocumentReference docRef = fStore.collection("users").document(userId);
                             Map<String,Object> user = new HashMap< >();
@@ -118,7 +118,7 @@ public class RegistrationActivity extends AppCompatActivity
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));  //non e' questal'activity che dovra' lanciare in realta'
                             finish();
                         }else{
-                            Toast.makeText(RegistrationActivity.this, "error"+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistrationActivity.this, getResources().getString(R.string.toast_error)+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }

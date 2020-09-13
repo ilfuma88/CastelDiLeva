@@ -1,14 +1,32 @@
 <resources>
-    <string name="app_name">#IORESTOACASTELDILEVA</string>
+    <string name="app_name" translatable="false">#IORESTOACASTELDILEVA</string>
+    <string name="tv_shop_clothes">Abbigliamento</string>
+    <string name="tv_shop_travel">Agenzie di viaggio</string>
+    <string name="tv_shop_zootech">Alimenti zootecnici</string>
+    <string name="tv_shop_auto_parts">Autoricambi</string>
+    <string name="tv_shop_bar_diner">Bar e Tavole calde</string>
+    <string name="tv_shop_caf">CAF</string>
+    <string name="tv_shop_stationery">Cartolerie</string>
+    <string name="tv_shop_beauty_salon">Centri estetici</string>
+    <string name="tv_shop_coffee_pod">Cialde e Capsule</string>
+    <string name="tv_shop_dentist">Dentista</string>
+    <string name="tv_shop_building_hardware_store">Edilizia e Ferramenta</string>
+    <string name="tv_shop_physiotherapy">Fisioterapia</string>
+    <string name="tv_shop_jewelry">Gioiellerie</string>
+    <string name="tv_shop_playroom">Ludoteche</string>
+    <string name="tv_shop_rest_pizzeria">Ristoranti e Pizzerie</string>
+    <string name="tv_shop_sport" translatable="false">Sport</string>
+    <string name="tv_shop_typography">Tipografia</string>
+    <string name="tv_shop_nursery_flow_shop">Vivai e Fiorai</string>
     <string name="tv_log_in_acc">Accedi al tuo account</string>
     <string name="btn_log_in">Accedi</string>
     <string name="btn_Log_out">Disconnetti</string>
     <string name="btn_sign_in">Registrati</string>
-    <string name="et_hint_email">Email</string>
-    <string name="et_hint_psw">Password</string>
+    <string name="et_hint_email" translatable="false">Email</string>
+    <string name="et_hint_psw" translatable="false">Password</string>
     <string name="tv_dont_have_account">Non hai ancora un account? \n Registrati cliccando qui sotto</string>
     <string name="et_hint_repeat_psw">Verifica password</string>
-    <string name="title_activity_app_home">ScrollingActivity</string>
+    <string name="title_activity_app_home" translatable="false">ScrollingActivity</string>
     <string name="tv_your_account">Il mio account</string>
     <string name="tv_your_name">Il tuo nome </string>
     <string name="tv__your_email">La tua Email </string>
@@ -19,11 +37,11 @@
     <string name="btn_offers">Offerte</string>
     <string name="btn_your_account">Il mio account</string>
     <string name="btn_who_we_are">Chi siamo</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Impostazioni</string>
     <string name="btn_about_us">Chi siamo</string>
     <string name="btn_who_we_are_us_official_site">Clicca qui se vuoi visitare il sito ufficiale dell\'iniziativa #IORESTOACASTELDILEVA</string>
     <string name="tv_how_it_works">Come funziona l\'iniziativa</string>
-    <string name="tv_how_app_works">Per avere il tuo primo coupon recati in una delle attività aderenti all\’iniziativa e, dopo aver acquistato qualcosa in una qualsiasi di queste, vai su “Il mio account” e fai scannerizzare il tuo codice QR utente al venditore. \n A questo punto, nella sezione I miei coupon, avrai un coupon disponibile, che potrai utilizzare in una qualsiasi delle attività aderenti, semplicemente mostrando il codice QR sconto. \n I coupon possono essere utilizzati una volta ciascuno, ma se fai acquisti in più attività aderenti all’iniziativa, ne puoi cumulare quanti ne vuoi!</string>
+    <string name="tv_how_app_works">Per avere il tuo primo coupon recati in una delle attività aderenti all\\’iniziativa e, dopo aver acquistato qualcosa in una qualsiasi di queste, vai su “Il mio account” e fai scannerizzare il tuo codice QR utente al venditore.   A questo punto, nella sezione I miei coupon, avrai un coupon disponibile, che potrai utilizzare in una qualsiasi delle attività aderenti, semplicemente mostrando il codice QR sconto.   I coupon possono essere utilizzati una volta ciascuno, ma se fai acquisti in più attività aderenti all’iniziativa, ne puoi cumulare quanti ne vuoi!</string>
     <string name="tv_create_new_account">Crea un nuovo account</string>
     <string name="et_hint_name_surname">Nome e Cognome</string>
     <string name="btn_back_to_login">Vai al Login</string>
@@ -45,30 +63,36 @@
     <string name="tv_changephoto">Clicca sull\'immagine per cambiare foto</string>
     <string name="btn_set_photo">Imposta foto</string>
     <string name="toast_img_uploaded">Immagine caricata correttamente</string>
-    <string name="text_tvMimmi">Mimmi Abbigliamento Donna</string>
+    <string name="text_tvMimmi" translatable="false">Mimmi Abbigliamento Donna</string>
     <string name="text_tvEdilPavone">Nuova Edilizia Pavone (spesa minima 50€) ​</string>
     <string name="text_tvMGGioielli">MG Gioielli (prezzo dell\'oro bloccato a 40 €/gr Sconto 20% su acquisto nuovo orologio, se rottami uno vecchio)</string>
     <string name="text_tvMash">Mash (spesa minima 30€) ​</string>
     <string name="text_tvDeGustibusCaffe">De Gustibus Caffè (Spesa minima 50€ - non cumulabile)</string>
-    <string name="text_tvBorgoMerlo">Borgo del Merlo</string>
-    <string name="text_tvCaf">CAF Patronato Castel di leva</string>
-    <string name="text_tvEscapeTravelTitle">Escape 4 Travel:</string>
+    <string name="text_tvBorgoMerlo" translatable="false">Borgo del Merlo</string>
+    <string name="toast_user_created">Utente creato</string>
+    <string name="toast_error">Errore</string>
+    <string name="toast_use_logged_in">Hai effettuato l\'accesso correttamente </string>
+    <string name="text_tvCaf" translatable="false">CAF Patronato Castel di leva</string>
+    <string name="text_tvEscapeTravelTitle" translatable="false">Escape 4 Travel:</string>
     <string name="text_tvEscapeTravelServices1">Weekend in Italia a fronte di una spesa di 1500€</string>
     <string name="text_tvEscapeTravelServices2">Weekend benessere a fronte di una spesa di 2000€</string>
-    <string name="text_tvLudoPiccPrincTitle">Ludoteca Piccolo Principe:</string>
+    <string name="text_tvLudoPiccPrincTitle" translatable="false">Ludoteca Piccolo Principe:</string>
     <string name="text_tvLudoPiccPrincServices">Ogni 7 ingressi, 2 Omaggio</string>
-    <string name="text_tvADFisioTitle">ADFisio:</string>
+    <string name="text_tvADFisioTitle" translatable="false">ADFisio:</string>
     <string name="text_tvADFisioServices">Per un ciclo di almeno 5 sedute, un massaggio decontratturante in omaggio</string>
-    <string name="text_tvPizzeriaLeSorelleTitle">Pizzeria Le Sorelle</string>
+    <string name="text_tvPizzeriaLeSorelleTitle" translatable="false">Pizzeria Le Sorelle</string>
     <string name="text_tvPizzeriaLeSorelleServices">Ogni 30€ di spesa, una bevanda grande in omaggio</string>
-    <string name="text_tvPartyShopTitle">Party Shop</string>
+    <string name="text_tvPartyShopTitle" translatable="false">Party Shop</string>
     <string name="text_tvPartyShopSpecialPackages1">Sconto 15% su articoli di cartoleria (Spesa minima 10€)</string>
     <string name="text_tvPartyShopSpecialPackages2">Sconto 20% su allestimento con palloncini (Spesa minima 20€)</string>
-    <string name="text_tvEsteticaBioBeautyTitle">Estetica Bio Beauty</string>
+    <string name="text_tvEsteticaBioBeautyTitle" translatable="false">Estetica Bio Beauty</string>
     <string name="text_tvEsteticaBioBeautySpecialPackages1">Sconto 20% Su Trattamenti Estetici (Spesa minima 65€)</string>
     <string name="text_tvEsteticaBioBeautySpecialPackages2">Sconto - 15% Su acquisto di prodotti viso, corpo, make-up (Spesa minima 55€)</string>
-    <string name="text_tvShopName">ShopName</string>
-    <string name="text_tvShopDescription">ShopDescription</string>
-    <string name="text_contentDescription_ivShopLogo">Shop Logo</string>
+    <string name="text_tvShopName" translatable="false">ShopName</string>
+    <string name="text_tvShopDescription" translatable="false">ShopDescription</string>
+    <string name="text_contentDescription_ivShopLogo" translatable="false">Shop Logo</string>
     <string name="text_tvContacts">Contatti</string>
+    <string name="text_etErrorEmail">Inserire un\'email</string>
+    <string name="text_etErrorPass">Inserire una password</string>
+    <string name="text_et_RepPass">La password non coincide</string>
 </resources>

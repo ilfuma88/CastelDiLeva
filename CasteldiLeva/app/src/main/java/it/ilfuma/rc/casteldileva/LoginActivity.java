@@ -63,13 +63,13 @@ public class LoginActivity extends AppCompatActivity
                 //checking that EditText are not empty
                 if (TextUtils.isEmpty(email)) {
                     progressBar.setVisibility(View.GONE);
-                    et_email.setError("L'email è necessaria");
+                    et_email.setError(getResources().getString(R.string.text_etErrorEmail));
                     break;
                 }
 
                 if (TextUtils.isEmpty(password)) {
                     progressBar.setVisibility(View.GONE);
-                    et_email.setError("La password è necessaria");
+                    et_email.setError(getResources().getString(R.string.text_etErrorPass));
                     break;
                 }
 
@@ -78,11 +78,11 @@ public class LoginActivity extends AppCompatActivity
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "User Logged in.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, getResources().getString(R.string.toast_use_logged_in), Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                             finish();
                         } else {
-                            Toast.makeText(LoginActivity.this, "error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, getResources().getString(R.string.toast_error) + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }

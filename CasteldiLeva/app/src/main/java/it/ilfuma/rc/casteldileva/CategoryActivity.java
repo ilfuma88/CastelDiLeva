@@ -1,6 +1,7 @@
 package it.ilfuma.rc.casteldileva;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,10 +23,15 @@ public class CategoryActivity extends AppCompatActivity {
 
             private String[] textCategorie;
             private Integer[] imgCategorie;
+            Resources res = getResources();
 
             Holder() {
-                textCategorie = new String[]{"Abbigliamento", "Agenzia di viaggio", "Alimenti zootecnici","Autoricambi", "Bar/Tavola Calda", "CAF", "Cartolerie", "Centro Estetico", "Cialde/Capsule",
-                        "Dentista", "Edilizia/Ferramenta", "Fisioterapia", "Gioielleria", "Ludoteca", "Ristorante/Pizzeria", "Sport", "Tipografia", "Vivai/Fiorai"};
+                textCategorie = new String[]{res.getString(R.string.tv_shop_clothes),res.getString(R.string.tv_shop_travel), res.getString(R.string.tv_shop_zootech),
+                        res.getString(R.string.tv_shop_auto_parts), res.getString(R.string.tv_shop_bar_diner), res.getString(R.string.tv_shop_caf), res.getString(R.string.tv_shop_stationery),
+                        res.getString(R.string.tv_shop_beauty_salon), res.getString(R.string.tv_shop_coffee_pod), res.getString(R.string.tv_shop_dentist),
+                        res.getString(R.string.tv_shop_building_hardware_store), res.getString(R.string.tv_shop_physiotherapy),
+                        res.getString(R.string.tv_shop_jewelry), res.getString(R.string.tv_shop_playroom), res.getString(R.string.tv_shop_rest_pizzeria),
+                        res.getString(R.string.tv_shop_sport), res.getString(R.string.tv_shop_typography), res.getString(R.string.tv_shop_nursery_flow_shop)};
 
                 imgCategorie = new Integer[]{R.drawable.negozi_abbigliamento, R.drawable.agenzia_di_viaggio, R.drawable.pet_shop,  R.drawable.autoricambi, R.drawable.bar_tavolacalda, R.drawable.caf,
                         R.drawable.cartoleria, R.drawable.centro_estetico, R.drawable.cialde_capsule, R.drawable.dentista,
