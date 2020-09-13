@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -52,6 +53,7 @@ public class ShopActivity extends AppCompatActivity {
         private Context mContext;   // e' il contesto in cui gira l'Activity
 
         private ScrollView svShopDetails;
+        private ConstraintLayout clCvDetails;
         private CardView cvShopInfo, cvShopDeals1, cvShopDeals2, cvShopDeals3, cvContacts;
         private TextView tvShopName, tvShopDescription, tvDiscount1, tvCondition1, tvDiscount2, tvCondition2, tvDiscount3, tvCondition3;
         private TextView tvNumber1, tvNumber2;
@@ -62,6 +64,7 @@ public class ShopActivity extends AppCompatActivity {
 
             svShopDetails = findViewById(R.id.svShopDetails);
             svShopDetails.setVisibility(View.VISIBLE);
+            clCvDetails = svShopDetails.findViewById(R.id.clCvDetails);
 
             cvShopInfo = svShopDetails.findViewById(R.id.cvShopInfo);
             cvShopDeals1 = svShopDetails.findViewById(R.id.cvShopDeals1);
