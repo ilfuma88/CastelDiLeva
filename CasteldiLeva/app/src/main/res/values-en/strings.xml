@@ -80,4 +80,5 @@
     <string name="text_etErrorPass">Enter password</string>
     <string name="text_et_RepPass">Password doesn\'t match</string>
     <string name="text_tvMash">Mash (Minimum charge of 30€)</string>
+    <string name="toast_permission_denied_photo">You have denied the permission to access your images, so you can\'t upload a profile picture</string>
 </resources>

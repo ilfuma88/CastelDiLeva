@@ -71,6 +71,7 @@
     <string name="text_tvBorgoMerlo" translatable="false">Borgo del Merlo</string>
     <string name="toast_user_created">Utente creato</string>
     <string name="toast_error">Errore</string>
+    <string name="toast_permission_denied_photo">Non hai dato il permesso di accedere alle tue immagini quindi non puoi caricare una foto profilo</string>
     <string name="toast_use_logged_in">Hai effettuato l\'accesso correttamente </string>
     <string name="text_tvCaf" translatable="false">CAF Patronato Castel di leva</string>
     <string name="text_tvEscapeTravelTitle" translatable="false">Escape 4 Travel:</string>

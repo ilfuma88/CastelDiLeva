@@ -3,8 +3,13 @@ package it.ilfuma.rc.casteldileva;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
@@ -130,9 +135,30 @@ public class YourAccountActivity extends AppCompatActivity
                 //Intent that opens images
                 Intent intent = new Intent();
                 intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, 1000);
+                intent.setAction(Intent.ACTION_GET_CONTENT);//allow the user to select a particular kind of data, in this case the type "image"
+                //Runtime permission request to read external storage
+                if (ContextCompat.checkSelfPermission(YourAccountActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!=
+                        (PackageManager.PERMISSION_GRANTED)){
+                    ActivityCompat.requestPermissions(YourAccountActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2000);
+                }
+                else{
+                    startActivityForResult(intent, 1000);
+                }
                 break;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode==2000 && grantResults[0] ==PackageManager.PERMISSION_GRANTED ){
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);//allow the user to select a particular kind of data, in this case the type "image"
+            startActivityForResult(intent, 1000);
+        }
+        else{
+            Toast.makeText(YourAccountActivity.this, getResources().getString(R.string.toast_permission_denied_photo), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -153,7 +179,7 @@ public class YourAccountActivity extends AppCompatActivity
     private void uploadImgToFirebase(Uri imageUri){
         //create a reference in Firebase Storage
         final StorageReference imgRef = mStorageRef.child("users/"+fAuth.getUid()+"/profile.jpg");
-        //put in the Firebase refernce that points to the path above the choosen image
+        //put in the Firebase reference that points to the path above the choosen image
         imgRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
