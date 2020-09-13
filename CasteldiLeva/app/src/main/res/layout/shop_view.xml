@@ -22,21 +22,21 @@
             android:id="@+id/tvShopDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="67dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="67dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:textSize="@dimen/tvTextSize"/>
+            android:textSize="@dimen/tvTextSize" />
 
         <TextView
             android:id="@+id/tvShopName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
             android:layout_marginLeft="124dp"
+            android:layout_marginTop="23dp"
             android:layout_marginRight="15dp"
-            android:textSize="@dimen/tvTextSize"
             android:textAlignment="center"
+            android:textSize="@dimen/tvTextSize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
