@@ -55,7 +55,7 @@ public class ShopActivity extends AppCompatActivity {
         private CardView cvShopInfo, cvShopDeals1, cvShopDeals2, cvShopDeals3, cvContacts;
         private TextView tvShopName, tvShopDescription, tvDiscount1, tvCondition1, tvDiscount2, tvCondition2, tvDiscount3, tvCondition3;
         private TextView tvNumber1, tvNumber2;
-        private ImageView ivShopLogo, ivWebsite, ivMaps, ivMail;
+        private ImageView ivLogo, ivWebsite, ivMaps, ivMail;
 
         public Holder(Context context) {
             mContext = context;
@@ -71,7 +71,7 @@ public class ShopActivity extends AppCompatActivity {
 
             tvShopName = cvShopInfo.findViewById(R.id.tvShopName);
             tvShopDescription = cvShopInfo.findViewById(R.id.tvShopDescription);
-            ivShopLogo = cvShopInfo.findViewById(R.id.ivShopLogo);
+            ivLogo = cvShopInfo.findViewById(R.id.ivLogo);
 
             tvDiscount1 = cvShopDeals1.findViewById(R.id.tvDiscount1);
             tvCondition1 = cvShopDeals1.findViewById(R.id.tvCondition1);
@@ -104,7 +104,7 @@ public class ShopActivity extends AppCompatActivity {
             /* setto le TextView e le ImageView */
             tvShopName.setText(shop.shopName);
             tvShopDescription.setText(shop.shopDescription);
-            setImage(shop.shopLogo, ivShopLogo);    // chiamo il metodo per impostare il logo del negozio nella ImageView "ivShopLogo"
+            setImage(shop.shopLogo, ivLogo);    // chiamo il metodo per impostare il logo del negozio nella ImageView "ivShopLogo"
 
             if (shop.discount1 != null && shop.discount1.compareTo("") != 0)    // se il campo è presente (non null e non "")
                 tvDiscount1.setText(shop.discount1);

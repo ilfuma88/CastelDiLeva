@@ -71,7 +71,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/ivShopLogo"
+                        android:id="@+id/ivLogo"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/iv_height_medium"
                         android:layout_marginStart="@dimen/margin_distance_small"
@@ -99,7 +99,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ivShopLogo" />
+                        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -322,6 +322,7 @@
                         android:layout_marginStart="@dimen/margin_distance_small"
                         android:layout_marginTop="@dimen/margin_distance_small"
                         android:layout_marginBottom="@dimen/margin_distance_small"
+                        android:background="@drawable/bg_tv_faded_white_large"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvNumber1"
@@ -332,6 +333,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="@dimen/margin_distance_large"
+                        android:background="@drawable/bg_ibtn_faded_dark_large"
                         app:layout_constraintBottom_toBottomOf="@+id/ivWebsite"
                         app:layout_constraintStart_toEndOf="@+id/ivWebsite"
                         app:layout_constraintTop_toTopOf="@+id/ivWebsite"
@@ -342,6 +344,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="@dimen/margin_distance_large"
+                        android:background="@drawable/bg_tv_faded_white_large"
                         app:layout_constraintBottom_toBottomOf="@+id/ivMaps"
                         app:layout_constraintStart_toEndOf="@+id/ivMaps"
                         app:layout_constraintTop_toTopOf="@+id/ivMaps"
