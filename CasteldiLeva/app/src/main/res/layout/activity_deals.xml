@@ -56,6 +56,7 @@
                 android:background="@android:drawable/editbox_dropdown_light_frame"
                 android:backgroundTint="?android:attr/textColorSecondaryInverse"
                 android:fontFamily="@font/aclonica"
+                android:padding="@dimen/tv_padding_large"
                 android:text="@string/text_tvDeals"
                 android:textAlignment="center"
                 android:textColor="@color/col_dark_txt"

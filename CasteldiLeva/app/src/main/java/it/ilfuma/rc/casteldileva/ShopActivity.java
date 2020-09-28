@@ -113,16 +113,23 @@ public class ShopActivity extends AppCompatActivity {
                 tvDiscount1.setText(shop.discount1);
             if (shop.condition1 != null && shop.condition1.compareTo("") != 0)  // se il campo è presente (non null e non "")
                 tvCondition1.setText(shop.condition1);
+            if (shop.discount1 == null)
+                cvShopDeals1.setVisibility(View.GONE);
+
 
             if (shop.discount2 != null && shop.discount2.compareTo("") != 0)    // se il campo è presente (non null e non "")
                 tvDiscount2.setText(shop.discount2);
             if (shop.condition2 != null && shop.condition2.compareTo("") != 0)  // se il campo è presente (non null e non "")
                 tvCondition2.setText(shop.condition2);
+            if (shop.discount2 == null)
+                cvShopDeals2.setVisibility(View.GONE);
 
             if (shop.discount3 != null && shop.discount3.compareTo("") != 0)    // se il campo è presente (non null e non "")
                 tvDiscount3.setText(shop.discount3);
             if (shop.condition3 != null && shop.condition3.compareTo("") != 0)  // se il campo è presente (non null e non "")
                 tvCondition3.setText(shop.condition3);
+            if (shop.discount3 == null)
+                cvShopDeals3.setVisibility(View.GONE);
 
             if (shop.shopNumber1 != null && shop.shopNumber1.compareTo("") != 0)    // se il campo è presente (non null e non "")
                 tvNumber1.setText(shop.shopNumber1);

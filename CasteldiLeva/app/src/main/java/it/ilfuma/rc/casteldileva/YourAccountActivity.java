@@ -96,7 +96,7 @@ public class YourAccountActivity extends AppCompatActivity
 
         //now we will retrive user data from firestore database
         DocumentReference docRef = fStore.collection(("users")).document(userId ); //
-        docRef.addSnapshotListener(this, new EventListener<DocumentSnapshot>() { // lo snapshotlisteneer e' un modo del cazzo  per leggere il doc, perche crea u oggetto chh viene aggiornato  ad ogni modifica sul  backend, si sarebbe potuto usafre un semplice get
+        docRef.addSnapshotListener(this, new EventListener<DocumentSnapshot>() { //                                                                  lo snapshotlisteneer e' un modo del cazzo  per leggere il doc, perche crea u oggetto chh viene aggiornato  ad ogni modifica sul  backend, si sarebbe potuto usafre un semplice get
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 if (documentSnapshot !=  null){
